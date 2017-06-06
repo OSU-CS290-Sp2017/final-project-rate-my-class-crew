@@ -21,6 +21,8 @@ a {
   background-color: #777676;
   font-size: 25px;
   line-height: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .navlist {
@@ -32,6 +34,7 @@ a {
 .navitem a{
   display: inline-block;
   color: white;
+  padding-right: 10px;
 }
 
 li {
@@ -49,10 +52,6 @@ li {
 a:hover,
 a:focus {
   color: #ffca4f;
-}
-
-.navlink a:hover{
-  box-shadow: inset 0 -3px #ffca4f;
 }
 
 a:focus {
@@ -104,7 +103,7 @@ a:focus {
   outline: none;
 }
 
-.review-container {
+.twit-container {
   margin: 50px 10%;
   display: flex;
   flex-wrap: wrap;
@@ -322,4 +321,42 @@ label.star:before {
 
 .modal-footer .modal-accept-button:hover {
   background-color: #ffca4f;
+}
+
+/*-------------home page code------------------*/
+
+.class-page{
+  background-color: white;
+  width: 55%;
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
+.title-container{
+  font-size: 35px;
+}
+
+.intro{
+  color: #515050;
+  font-size: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.class-card{
+  font-size: 30px;
+}
+
+.class-card a{
+  color: #777676;
+}
+
+.class-card a:hover{
+  color: #ffca4f;
 }
