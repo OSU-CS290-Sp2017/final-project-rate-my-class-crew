@@ -15,6 +15,10 @@ var holdAtt = document.getElementById('twit-attribution-input');
 var array = [];
 var blank;
 
+//variables for adding new post to page via modal
+
+
+
 newTwitButton.addEventListener('click', function(){
   modal.classList.remove("hidden");
   backdrop.classList.remove("hidden");
