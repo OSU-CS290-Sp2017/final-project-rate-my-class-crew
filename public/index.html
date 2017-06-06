@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>Rate My Class OSU</title>
+
+    <!-- This is a stylesheet that includes the font we chose -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css" media="screen">
+
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
+      <a href="#"><h1 class="site-title"><i class="fa fa-paper-plane"></i> Rate My Class OSU</h1></a>
+
+      <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem navlink active"><a href="#">Home</a></li>
+          <li class="navitem navlink"><a href="#">Trending</a></li>
+          <li class="navitem navlink"><a href="#">Classes</a></li>
+          <li class="navitem navbar-search">
+            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="twit-container">
+
+      <article class="twit">
+        <div class="twit-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="twit-content">
+          <p class="class-title">
+            <b>Class Code: </b> CS290
+          </p>
+          <p class="class-teacher">
+            <b>Teacher: </b> Rob Hess
+          </p>
+          <p class="class-grade">
+            <b>Grade: </b> A+
+          </p>
+          <p class="class-recommend">
+            <b>Rating: </b>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </p>
+          <p class="class-comments">
+            <b>Comments: </b> Sitting in web dev... This class is so awesome!
+          </p>
+          <p class="twit-attribution">
+            <a href="#">CSMajorSp2017</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="twit">
+        <div class="twit-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="twit-content">
+          <p class="twit-text">
+            Anyone watch the baseball game last night?  The Beavs are still in 1st place!
+          </p>
+          <p class="twit-attribution">
+            <a href="#">BeaverBeliever</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="twit">
+        <div class="twit-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="twit-content">
+          <p class="twit-text">
+            A body in motion must remain in motion unless acted upon by an outside force.
+          </p>
+          <p class="twit-attribution">
+            <a href="#">NewtonRulez</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="twit">
+        <div class="twit-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="twit-content">
+          <p class="twit-text">
+            Huh?
+          </p>
+          <p class="twit-attribution">
+            <a href="#">ConfusedTweeterer</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="twit">
+        <div class="twit-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="twit-content">
+          <p class="twit-text">
+            Why did the calf cross the road?
+          </p>
+          <p class="twit-attribution">
+            <a href="#">Setup</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="twit">
+        <div class="twit-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="twit-content">
+          <p class="twit-text">
+            To get to the udder side!
+          </p>
+          <p class="twit-attribution">
+            <a href="#">Punchline</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="twit">
+        <div class="twit-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="twit-content">
+          <p class="twit-text">
+            Any questions about flexboxes?
+          </p>
+          <p class="twit-attribution">
+            <a href="#">Hess</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="twit">
+        <div class="twit-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="twit-content">
+          <p class="twit-text">
+            Friendly reminder: your taxes were due yesterday.
+          </p>
+          <p class="twit-attribution">
+            <a href="#">TheIRS</a>
+          </p>
+        </div>
+      </article>
+
+    </main>
+
+    <button type="button" id="create-twit-button"><i class="fa fa-telegram"></i></button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-twit-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Rate A Class</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="twit-input-element">
+            <label for="class-code-input">Class Code</label>
+            <input type="text" id="class-code-input">
+          </div>
+          <div class="twit-input-element">
+            <label for="teacher-input">Teacher</label>
+            <input type="text" id="teacher-input">
+          </div>
+          <div class="twit-input-element">
+            <label for="grade-received-input">Grade Received</label>
+            <input type="text" id="grade-received-input">
+          </div>
+          <div class="twit-input-element">
+            <label for="rating-input">Rating</label>
+            <div class="stars">
+  <form action="">
+    <input class="star star-5" id="star-5" type="radio" name="star"/>
+    <label class="star star-5" for="star-5"></label>
+    <input class="star star-4" id="star-4" type="radio" name="star"/>
+    <label class="star star-4" for="star-4"></label>
+    <input class="star star-3" id="star-3" type="radio" name="star"/>
+    <label class="star star-3" for="star-3"></label>
+    <input class="star star-2" id="star-2" type="radio" name="star"/>
+    <label class="star star-2" for="star-2"></label>
+    <input class="star star-1" id="star-1" type="radio" name="star"/>
+    <label class="star star-1" for="star-1"></label>
+  </form>
+</div>
+
+            <!--<input type="text" id="rating-input">-->
+          </div>
+          <div class="twit-input-element">
+            <label for="twit-text-input">Anything else?</label>
+            <textarea id="twit-text-input"></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Create Twit</button>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+
+  <script src="index.js" charset="utf-8"></script>
+
+</html>
