@@ -1,6 +1,6 @@
 //--------------adding new twit to DOM--------------//
 
-var newTwitButton = document.getElementById('create-twit-button');
+var newReviewButton = document.getElementById('create-twit-button');
 var modal = document.getElementById('create-twit-modal');
 var exitBut = document.getElementsByClassName('modal-close-button');
 var cancelBut = document.getElementsByClassName('modal-cancel-button');
@@ -16,10 +16,12 @@ var array = [];
 var blank;
 
 //variables for adding new post to page via modal
+var classCode;
 
 
 
-newTwitButton.addEventListener('click', function(){
+//
+newReviewButton.addEventListener('click', function(){
   modal.classList.remove("hidden");
   backdrop.classList.remove("hidden");
 });
