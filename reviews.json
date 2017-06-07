@@ -1,4 +1,13 @@
 {
+  "class-name": "CS290",
+  "teacher": "Rob Hess",
+  "grade": "A+",
+  "rating":"not sure how to store this yet",
+  "comments": "This is the best class I've ever taken. Rob is the best teacher ever!"
+},
+
+
+{
 	"class-name": "ME 334",
 	"teacher": "Bob Bobberson",
 	"grade": "B",
@@ -79,3 +88,14 @@
 	"comments": "Overall good intro class."
 	"name": "KittySaysMeow22"
 },
+=======
+  "class-code": "CS290",
+  "teacher": "Rob Hess",
+  "grade": "A+",
+  "rating":"not sure how to store this yet",
+  "comments": "Sitting in web dev... This class is so awesome!"
+},
+{
+
+}
+>>>>>>> a8304e1b8fdffd7da5de9f7da74bb73bc4b22e47
