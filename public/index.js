@@ -42,10 +42,10 @@ function generateNewPostElem(classTitle, prof, grade, comment){
 function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
-    if (classCode.value && teacher.value && grade.value && otherText.value){
+    if (classCode.value && teacher.value && grade.value){
       var newPostElem = generateNewPostElem(classCode, teacher, grade, otherText);
       var reviewContainer = document.querySelector('.review-container');
-      reviewContainer.appendChild(newPostElem);
+      reviewContainer.insertAdjacentHTML('beforeend', newPostElem);
       closeModal();
     }
     else{
