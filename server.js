@@ -9,10 +9,10 @@ var port = process.env.PORT || 3000;
 app.engine('handlebars', exphbs({defaultLayout: 'start'}));
 app.set('view engine', 'handlebars');
 
-//app.get('/home', function(request, response, next){
-  //response.render('home');
-//});
 app.get('/', function(request, response, next){
+  response.render('home');
+});
+app.get('/trending', function(request, response, next){
   var templateArgs = {
     reviews: reviewData
   };
