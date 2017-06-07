@@ -2,20 +2,20 @@
   "CS": {
     "reviews": [
       {
-        "class-name": "CS290",
+        "className": "CS290",
         "teacher": "Rob Hess",
         "grade": "A+",
         "rating":"not sure how to store this yet",
         "comments": "This is the best class I've ever taken. Rob is the best teacher ever!"
       },
       {
-        "class-name": "CS160",
+        "className": "CS160",
         "teacher": "Jen Jenson",
         "grade": "A+",
         "comments": "This is the best class I've ever taken. Rob is the best teacher ever!"
       },
       {
-      	"class-name": "CS 434",
+      	"className": "CS 434",
       	"teacher": "Ben Bennet",
       	"grade": "A-",
       	"comments": "Best. Class. Ever."
@@ -26,7 +26,7 @@
   "ME": {
     "reviews": [
       {
-      	"class-name": "ME 334",
+      	"className": "ME 334",
       	"teacher": "Bob Bobberson",
       	"grade": "B",
       	"comments": "Exams were challenging but professor was very knowledgable and friendly"
@@ -37,13 +37,13 @@
   "ECE": {
     "reviews": [
       {
-      	"class-name": "ECE 286",
+      	"className": "ECE 286",
       	"teacher": "John Johnson",
       	"grade": "B+",
       	"comments": "Fun class overall. The lab component isn't required for CS majors, but I recommend taking it!"
       },
       {
-        "class-name": "ECE 222",
+        "className": "ECE 222",
         "teacher": "Frank Franklin",
         "grade": "B-",
         "comments": "Pretty challenging course but the TAs and professor are very helpful and caring."
@@ -54,13 +54,13 @@
   "BA": {
     "reviews": [
       {
-      	"class-name": "BA 456",
+      	"className": "BA 456",
       	"teacher": "Steve Stevenson",
       	"grade": "D+",
       	"comments": "You won't pass this class unless you read the texbook"
       },
       {
-      	"class-name": "BA 101",
+      	"className": "BA 101",
       	"teacher": "Rich Richardson",
       	"grade": "B+",
       	"comments": "Overall good intro class."
@@ -71,7 +71,7 @@
   "AG": {
     "reviews": [
       {
-      	"class-name": "AG 222",
+      	"className": "AG 222",
       	"teacher": "Will Williams",
       	"grade": "A",
       	"comments": "Awesome class. Awesome professor."
@@ -82,7 +82,7 @@
   "ENG": {
     "reviews": [
       {
-      	"class-name": "ENG 104",
+      	"className": "ENG 104",
       	"teacher": "Matt Matthews",
       	"grade": "A-",
       	"comments": "Class has weekly quizzes but if you study you'll be fine."
@@ -93,7 +93,7 @@
   "PS": {
     "reviews": [
       {
-      	"class-name": "PS 110",
+      	"className": "PS 110",
       	"teacher": "Tom Tomlinson",
       	"grade": "B",
       	"comments": "This class is about the Zombie Apocalypse. Enough said."
@@ -104,7 +104,7 @@
   "FIN": {
     "reviews": [
       {
-      	"class-name": "FIN 345",
+      	"className": "FIN 345",
       	"teacher": "Monty Montgomery",
       	"grade": "F",
       	"comments": "You have to go to class or you'll fail. I learned that the hard way."
