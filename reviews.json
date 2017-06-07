@@ -1,1 +1,81 @@
+{
+	"class-name": "ME 334",
+	"teacher": "Bob Bobberson",
+	"grade": "B",
+	"comments": "Exams were challenging but professor was very knowledgable and friendly"
+	"name": "ME-Lover97"
+},
 
+{
+	"class-name": "ECE 286",
+	"teacher": "John Johnson",
+	"grade": "B+",
+	"comments": "Fun class overall. The lab component isn't required for CS majors, but I recommend taking it!"
+	"name": "IBleedBlackAndOrange"
+},
+
+{
+	"class-name": "BA 456",
+	"teacher": "Steve Stevenson",
+	"grade": "D+",
+	"comments": "You won't pass this class unless you read the texbook"
+	"name": "Cats4Ever"
+},
+
+{
+	"class-name": "AG 222",
+	"teacher": "Will Williams",
+	"grade": "A",
+	"comments": "Awesome class. Awesome professor."
+	"name": "TreeHugger124"
+},
+
+{
+	"class-name": "ENG 104",
+	"teacher": "Matt Matthews",
+	"grade": "A-",
+	"comments": "Class has weekly quizzes but if you study you'll be fine."
+	"name": "ShakespeareIsTheBomb"
+},
+
+{
+	"class-name": "PS 110",
+	"teacher": "Tom Tomlinson",
+	"grade": "B",
+	"comments": "This class is about the Zombie Apocalypse. Enough said."
+	"name": "GoBeavs001"
+},
+
+{
+	"class-name": "FIN 345",
+	"teacher": "Monty Montgomery",
+	"grade": "F",
+	"comments": "You have to go to class or you'll fail. I learned that the hard way."
+	"name": "MoneyMaker96"
+},
+
+
+{
+	"class-name": "CS 434",
+	"teacher": "Ben Bennet",
+	"grade": "A-",
+	"comments": "Best. Class. Ever."
+	"name": "PassionateProgrammer62"
+},
+
+
+{
+	"class-name": "ECE 222",
+	"teacher": "Frank Franklin",
+	"grade": "B-",
+	"comments": "Pretty challenging course but the TAs and professor are very helpful and caring."
+	"name": "HardwareFan900"
+},
+
+{
+	"class-name": "BA 101",
+	"teacher": "Rich Richardson",
+	"grade": "B+",
+	"comments": "Overall good intro class."
+	"name": "KittySaysMeow22"
+},
