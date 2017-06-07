@@ -2,8 +2,10 @@
 
 <main class="review-container">
 
-  {{#each reviews}}
-    {{> review}}
+  {{#each class}}
+    {{#each reviews}}
+      {{> review}}
+    {{/each}}
   {{/each}}
 
 </main>
