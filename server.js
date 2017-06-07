@@ -6,12 +6,12 @@ var exphbs = require('express-handlebars');
 var reviewData = require('./reviews');
 var app = express();
 var port = process.env.PORT || 3000;
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({defaultLayout: 'start'}));
 app.set('view engine', 'handlebars');
 
 app.get('/', function(request, response, next){
   var templateArgs = {
-    reviews = reviewData
+    reviews: reviewData
   };
   response.render('main', templateArgs);
 });
