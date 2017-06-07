@@ -14,7 +14,7 @@ app.get('/', function(request, response, next){
 });
 app.get('/trending', function(request, response, next){
   var templateArgs = {
-    reviews: reviewData
+    class: reviewData
   };
   response.render('main', templateArgs);
 });
