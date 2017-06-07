@@ -6,13 +6,7 @@ var exitButton = document.getElementsByClassName('modal-close-button');
 var cancelButton = document.getElementsByClassName('modal-cancel-button');
 var acceptButtton  = document.getElementsByClassName('modal-accept-button');
 var modalBackdrop = document.getElementById('modal-backdrop');
-var container = document.getElementsByClassName('twit-container');
-var newText = document.getElementById('twit-text-input');
-var userText = document.getElementById('twit-input-element');
-var userAtt = document.getElementById('twit-attribution-input');
-var holdText = document.getElementById('twit-text-input');
-var holdAtt = document.getElementById('twit-attribution-input');
-//var array = [];
+
 
 
 function openModal(){
@@ -25,42 +19,41 @@ function closeModal(){
   backdrop.classList.add('hidden');
 }
 
-// function generateNewPostElem(classTitle, prof, grade, comment, attribute){
-//   var reviewTemplate = Handlebars.templates.review;
-//   var reviewData = {
-//     className: classTitle,
-//     teacher: prof,
-//     grade: grade,
-//     comments: comment,
-//     name: attribute
-//   }
-//   return reviewTemplate(reviewData);
-// }
-//
-// function addReview(){
-//     //holdText.textContent = newText.value;
-//     //holdAtt.text = userAtt.value;
-//     var classCode =document.getElementById('class-code-input').value;
-//     var teacher = document.getElementById('teacher-input').value;
-//     var grade = document.getElementById('grade-recieved-input').value;
-// //no clue how to do this part yet
-// //  var starRating =
-//     var otherText = document.getElementById('twit-text-input').value;
-//     var attribute = document.getElementsByClassName('twit-attribution').text;
-//
-//     if (classCode && teacher && grade && otherText && attribute){
-//       var newPostElem = generateNewPostElem(classCode, teacher, grade, otherText, attribute);
-//       var reviewContainer = document.querySelector('.review-container');
-//       reviewContainer.appendChild(newPostElem);
-//       closeModal();
-//     }
-//     else{
-//       alert("You left something blank ya ding dong");
-//     }
-//
-// }
+function generateNewPostElem(classTitle, prof, grade, comment, attribute){
+  var reviewTemplate = Handlebars.templates.review;
+  var reviewData = {
+    className: classTitle,
+    teacher: prof,
+    grade: grade,
+    comments: comment,
+    name: attribute
+  }
+  return reviewTemplate(reviewData);
+}
 
-//**************event listeners*****************
+function addReview(){
+    //holdText.textContent = newText.value;
+    //holdAtt.text = userAtt.value;
+    var classCode =document.getElementById('class-code-input').value;
+    var teacher = document.getElementById('teacher-input').value;
+    var grade = document.getElementById('grade-recieved-input').value;
+//no clue how to do starRating yet
+    var otherText = document.getElementById('twit-text-input').value;
+    var attribute = document.getElementsByClassName('twit-attribution').text;
+
+    if (classCode && teacher && grade && otherText && attribute){
+      var newPostElem = generateNewPostElem(classCode, teacher, grade, otherText, attribute);
+      var reviewContainer = document.querySelector('.review-container');
+      reviewContainer.appendChild(newPostElem);
+      closeModal();
+    }
+    else{
+      alert("You left something blank ya ding dong");
+    }
+
+}
+
+/**************event listeners*****************/
 
 newPostButton.addEventListener('click',
 //both exitBut and cancelBut have same length
@@ -70,40 +63,6 @@ for (var i = 0; i < exitBut.length; i++) {
 }
 acceptButton[0].addEventListener('click', addReview);
 
-function addToDom(){
-
-  var newTwit = document.createElement("article");
-  var newDivIcon = document.createElement("div");
-  var newI = document.createElement("i");
-  var newDivText = document.createElement("div");
-  var newPText = document.createElement("p");
-  var newPAtt = document.createElement("p");
-  var newALink = document.createElement("a");
-
-  newTwit.classList.add("twit");
-  newDivIcon.classList.add("twit-icon");
-  newI.classList.add("fa");
-  newI.classList.add("fa-bullhorn");
-  newDivText.classList.add("twit-content");
-  newPText.classList.add("twit-text");
-  newPAtt.classList.add("twit-attribution");
-  newALink.href = '#';
-
-  container[0].appendChild(newTwit);
-  newTwit.appendChild(newDivIcon);
-  newDivIcon.appendChild(newI);
-  newTwit.appendChild(newDivText);
-  newDivText.appendChild(newPText);
-  newDivText.appendChild(newPAtt);
-  newPAtt.appendChild(newALink);
-
-  newPText.textContent = holdText.value;
-  newALink.text = holdAtt.value;
-  console.log(holdAtt.value);
-  console.log(holdText.value);
-  newText.value = "";
-  userAtt.value = "";
-}
 
 //-----------Search Bar-------------------//
 
