@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 [
 {
   "class-name": "CS290",
@@ -7,8 +7,6 @@
   "rating":"not sure how to store this yet",
   "comments": "This is the best class I've ever taken. Rob is the best teacher ever!"
 },
-=======
->>>>>>> origin/master
 
   {
     "class-name": "CS160",
@@ -76,13 +74,14 @@
   },
 
 
-<<<<<<< HEAD
+
 {
 	"class-name": "BA 101",
 	"teacher": "Rich Richardson",
 	"grade": "B+",
 	"comments": "Overall good intro class."
 },
+
 {
   "class-code": "CS290",
   "teacher": "Rob Hess",
@@ -90,8 +89,8 @@
   "rating":"not sure how to store this yet",
   "comments": "Sitting in web dev... This class is so awesome!"
 }
-]
-=======
+
+
   {
   	"class-name": "ECE 222",
   	"teacher": "Frank Franklin",
@@ -99,10 +98,4 @@
   	"comments": "Pretty challenging course but the TAs and professor are very helpful and caring."
   },
 
-  {
-  	"class-name": "BA 101",
-  	"teacher": "Rich Richardson",
-  	"grade": "B+",
-  	"comments": "Overall good intro class."
-  }
->>>>>>> origin/master
+]
