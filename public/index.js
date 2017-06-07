@@ -7,11 +7,11 @@ var cancelButton = document.getElementsByClassName('modal-cancel-button');
 var acceptButtton  = document.getElementsByClassName('modal-accept-button');
 var modalBackdrop = document.getElementById('modal-backdrop');
 var container = document.getElementsByClassName('twit-container');
-// var newText = document.getElementById('twit-text-input');
-// var userText = document.getElementById('twit-input-element');
-// var userAtt = document.getElementById('twit-attribution-input');
-// var holdText = document.getElementById('twit-text-input');
-// var holdAtt = document.getElementById('twit-attribution-input');
+var newText = document.getElementById('twit-text-input');
+var userText = document.getElementById('twit-input-element');
+var userAtt = document.getElementById('twit-attribution-input');
+var holdText = document.getElementById('twit-text-input');
+var holdAtt = document.getElementById('twit-attribution-input');
 //var array = [];
 
 
@@ -25,40 +25,40 @@ function closeModal(){
   backdrop.classList.add('hidden');
 }
 
-function generateNewPostElem(classTitle, prof, grade, comment, attribute){
-  var reviewTemplate = Handlebars.templates.review;
-  var reviewData = {
-    className: classTitle,
-    teacher: prof,
-    grade: grade,
-    comments: comment,
-    name: attribute
-  }
-  return reviewTemplate(reviewData);
-}
-
-function addReview(){
-    //holdText.textContent = newText.value;
-    //holdAtt.text = userAtt.value;
-    var classCode =document.getElementById('class-code-input').value;
-    var teacher = document.getElementById('teacher-input').value;
-    var grade = document.getElementById('grade-recieved-input').value;
-//no clue how to do this part yet
-//  var starRating =
-    var otherText = document.getElementById('twit-text-input').value;
-    var attribute = document.getElementsByClassName('twit-attribution').text;
-
-    if (classCode && teacher && grade && otherText && attribute){
-      var newPostElem = generateNewPostElem(classCode, teacher, grade, otherText, attribute);
-      var reviewContainer = document.querySelector('.review-container');
-      reviewContainer.appendChild(newPostElem);
-      closeModal();
-    }
-    else{
-      alert("You left something blank ya ding dong");
-    }
-
-}
+// function generateNewPostElem(classTitle, prof, grade, comment, attribute){
+//   var reviewTemplate = Handlebars.templates.review;
+//   var reviewData = {
+//     className: classTitle,
+//     teacher: prof,
+//     grade: grade,
+//     comments: comment,
+//     name: attribute
+//   }
+//   return reviewTemplate(reviewData);
+// }
+//
+// function addReview(){
+//     //holdText.textContent = newText.value;
+//     //holdAtt.text = userAtt.value;
+//     var classCode =document.getElementById('class-code-input').value;
+//     var teacher = document.getElementById('teacher-input').value;
+//     var grade = document.getElementById('grade-recieved-input').value;
+// //no clue how to do this part yet
+// //  var starRating =
+//     var otherText = document.getElementById('twit-text-input').value;
+//     var attribute = document.getElementsByClassName('twit-attribution').text;
+//
+//     if (classCode && teacher && grade && otherText && attribute){
+//       var newPostElem = generateNewPostElem(classCode, teacher, grade, otherText, attribute);
+//       var reviewContainer = document.querySelector('.review-container');
+//       reviewContainer.appendChild(newPostElem);
+//       closeModal();
+//     }
+//     else{
+//       alert("You left something blank ya ding dong");
+//     }
+//
+// }
 
 //**************event listeners*****************
 
