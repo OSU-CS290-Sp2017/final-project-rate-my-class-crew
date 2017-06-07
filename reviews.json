@@ -1,87 +1,80 @@
-{
-  "class-name": "CS290",
-  "teacher": "Rob Hess",
-  "grade": "A+",
-  "rating":"not sure how to store this yet",
-  "comments": "This is the best class I've ever taken. Rob is the best teacher ever!"
-},
+
+  {
+    "class-name": "CS160",
+    "teacher": "Jen Jenson",
+    "grade": "A+",
+    "comments": "This is the best class I've ever taken. Rob is the best teacher ever!"
+  },
 
 
-{
-	"class-name": "ME 334",
-	"teacher": "Bob Bobberson",
-	"grade": "B",
-	"comments": "Exams were challenging but professor was very knowledgable and friendly"
-},
+  {
+  	"class-name": "ME 334",
+  	"teacher": "Bob Bobberson",
+  	"grade": "B",
+  	"comments": "Exams were challenging but professor was very knowledgable and friendly"
+  },
 
-{
-	"class-name": "ECE 286",
-	"teacher": "John Johnson",
-	"grade": "B+",
-	"comments": "Fun class overall. The lab component isn't required for CS majors, but I recommend taking it!"
-},
+  {
+  	"class-name": "ECE 286",
+  	"teacher": "John Johnson",
+  	"grade": "B+",
+  	"comments": "Fun class overall. The lab component isn't required for CS majors, but I recommend taking it!"
+  },
 
-{
-	"class-name": "BA 456",
-	"teacher": "Steve Stevenson",
-	"grade": "D+",
-	"comments": "You won't pass this class unless you read the texbook"
-},
+  {
+  	"class-name": "BA 456",
+  	"teacher": "Steve Stevenson",
+  	"grade": "D+",
+  	"comments": "You won't pass this class unless you read the texbook"
+  },
 
-{
-	"class-name": "AG 222",
-	"teacher": "Will Williams",
-	"grade": "A",
-	"comments": "Awesome class. Awesome professor."
-},
+  {
+  	"class-name": "AG 222",
+  	"teacher": "Will Williams",
+  	"grade": "A",
+  	"comments": "Awesome class. Awesome professor."
+  },
 
-{
-	"class-name": "ENG 104",
-	"teacher": "Matt Matthews",
-	"grade": "A-",
-	"comments": "Class has weekly quizzes but if you study you'll be fine."
-},
+  {
+  	"class-name": "ENG 104",
+  	"teacher": "Matt Matthews",
+  	"grade": "A-",
+  	"comments": "Class has weekly quizzes but if you study you'll be fine."
+  },
 
-{
-	"class-name": "PS 110",
-	"teacher": "Tom Tomlinson",
-	"grade": "B",
-	"comments": "This class is about the Zombie Apocalypse. Enough said."
-},
+  {
+  	"class-name": "PS 110",
+  	"teacher": "Tom Tomlinson",
+  	"grade": "B",
+  	"comments": "This class is about the Zombie Apocalypse. Enough said."
+  },
 
-{
-	"class-name": "FIN 345",
-	"teacher": "Monty Montgomery",
-	"grade": "F",
-	"comments": "You have to go to class or you'll fail. I learned that the hard way."
-},
-
-
-{
-	"class-name": "CS 434",
-	"teacher": "Ben Bennet",
-	"grade": "A-",
-	"comments": "Best. Class. Ever."
-},
+  {
+  	"class-name": "FIN 345",
+  	"teacher": "Monty Montgomery",
+  	"grade": "F",
+  	"comments": "You have to go to class or you'll fail. I learned that the hard way."
+  },
 
 
-{
-	"class-name": "ECE 222",
-	"teacher": "Frank Franklin",
-	"grade": "B-",
-	"comments": "Pretty challenging course but the TAs and professor are very helpful and caring."
-},
+  {
+  	"class-name": "CS 434",
+  	"teacher": "Ben Bennet",
+  	"grade": "A-",
+  	"comments": "Best. Class. Ever."
+  },
 
-{
-	"class-name": "BA 101",
-	"teacher": "Rich Richardson",
-	"grade": "B+",
-	"comments": "Overall good intro class."
-},
-{
-  "class-code": "CS290",
-  "teacher": "Rob Hess",
-  "grade": "A+",
-  "rating":"not sure how to store this yet",
-  "comments": "Sitting in web dev... This class is so awesome!"
-},
+
+  {
+  	"class-name": "ECE 222",
+  	"teacher": "Frank Franklin",
+  	"grade": "B-",
+  	"comments": "Pretty challenging course but the TAs and professor are very helpful and caring."
+  },
+
+  {
+  	"class-name": "BA 101",
+  	"teacher": "Rich Richardson",
+  	"grade": "B+",
+  	"comments": "Overall good intro class."
+  }
