@@ -1,48 +1,49 @@
-//--------------adding new twit to DOM--------------//
 
+//buttons
 var newPostButton = document.getElementById('create-twit-button');
-var modal = document.getElementById('create-twit-modal');
 var exitButton = document.getElementsByClassName('modal-close-button');
 var cancelButton = document.getElementsByClassName('modal-cancel-button');
-var acceptButtton  = document.getElementsByClassName('modal-accept-button');
+var acceptButton  = document.getElementsByClassName('modal-accept-button');
+//modal stuff
+var modal = document.getElementById('create-twit-modal');
 var modalBackdrop = document.getElementById('modal-backdrop');
-
+//modal entry fields
+var classCode =document.getElementById('class-code-input');
+var teacher = document.getElementById('teacher-input');
+var grade = document.getElementById('grade-received-input');
+var starRating;//no clue how to do starRating yet
+var otherText = document.getElementById('twit-text-input');
 
 
 function openModal(){
+  console.log('opening modal');
   modal.classList.remove("hidden");
   modalBackdrop.classList.remove("hidden");
 }
 
 function closeModal(){
+  console.log('closing modal');
+  clearModalFields();
   modal.classList.add('hidden');
-  backdrop.classList.add('hidden');
+  modalBackdrop.classList.add('hidden');
 }
 
-function generateNewPostElem(classTitle, prof, grade, comment, attribute){
+function generateNewPostElem(classTitle, prof, grade, comment){
   var reviewTemplate = Handlebars.templates.review;
   var reviewData = {
     className: classTitle,
     teacher: prof,
     grade: grade,
     comments: comment,
-    name: attribute
   }
   return reviewTemplate(reviewData);
 }
-
+/*well thid doesn't work...*/
 function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
-    var classCode =document.getElementById('class-code-input').value;
-    var teacher = document.getElementById('teacher-input').value;
-    var grade = document.getElementById('grade-recieved-input').value;
-//no clue how to do starRating yet
-    var otherText = document.getElementById('twit-text-input').value;
-    var attribute = document.getElementsByClassName('twit-attribution').text;
-
-    if (classCode && teacher && grade && otherText && attribute){
-      var newPostElem = generateNewPostElem(classCode, teacher, grade, otherText, attribute);
+    if (classCode.value && teacher.value && grade.value && otherText.value){
+      var newPostElem = generateNewPostElem(classCode, teacher, grade, otherText);
       var reviewContainer = document.querySelector('.review-container');
       reviewContainer.appendChild(newPostElem);
       closeModal();
@@ -53,13 +54,22 @@ function addReview(){
 
 }
 
+function clearModalFields(){
+  classCode.value="";
+   teacher.value = '';
+   grade.value = '';
+  //var starRating;//no clue how to do starRating yet
+  otherText.value = '';
+
+}
+
 /**************event listeners*****************/
 
-newPostButton.addEventListener('click',
+newPostButton.addEventListener('click', openModal);
 //both exitBut and cancelBut have same length
-for (var i = 0; i < exitBut.length; i++) {
-  exitButton[i].addEventListener('click', exit);
-  cancelButton[i].addEventListener('click', exit);
+for (var i = 0; i < exitButton.length; i++) {
+  exitButton[i].addEventListener('click', closeModal);
+  cancelButton[i].addEventListener('click', closeModal);
 }
 acceptButton[0].addEventListener('click', addReview);
 
