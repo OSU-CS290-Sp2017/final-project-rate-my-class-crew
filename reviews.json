@@ -12,7 +12,6 @@
 	"teacher": "Bob Bobberson",
 	"grade": "B",
 	"comments": "Exams were challenging but professor was very knowledgable and friendly"
-	"name": "ME-Lover97"
 },
 
 {
@@ -20,7 +19,6 @@
 	"teacher": "John Johnson",
 	"grade": "B+",
 	"comments": "Fun class overall. The lab component isn't required for CS majors, but I recommend taking it!"
-	"name": "IBleedBlackAndOrange"
 },
 
 {
@@ -28,7 +26,6 @@
 	"teacher": "Steve Stevenson",
 	"grade": "D+",
 	"comments": "You won't pass this class unless you read the texbook"
-	"name": "Cats4Ever"
 },
 
 {
@@ -36,7 +33,6 @@
 	"teacher": "Will Williams",
 	"grade": "A",
 	"comments": "Awesome class. Awesome professor."
-	"name": "TreeHugger124"
 },
 
 {
@@ -44,7 +40,6 @@
 	"teacher": "Matt Matthews",
 	"grade": "A-",
 	"comments": "Class has weekly quizzes but if you study you'll be fine."
-	"name": "ShakespeareIsTheBomb"
 },
 
 {
@@ -52,7 +47,6 @@
 	"teacher": "Tom Tomlinson",
 	"grade": "B",
 	"comments": "This class is about the Zombie Apocalypse. Enough said."
-	"name": "GoBeavs001"
 },
 
 {
@@ -60,7 +54,6 @@
 	"teacher": "Monty Montgomery",
 	"grade": "F",
 	"comments": "You have to go to class or you'll fail. I learned that the hard way."
-	"name": "MoneyMaker96"
 },
 
 
@@ -69,7 +62,6 @@
 	"teacher": "Ben Bennet",
 	"grade": "A-",
 	"comments": "Best. Class. Ever."
-	"name": "PassionateProgrammer62"
 },
 
 
@@ -78,7 +70,6 @@
 	"teacher": "Frank Franklin",
 	"grade": "B-",
 	"comments": "Pretty challenging course but the TAs and professor are very helpful and caring."
-	"name": "HardwareFan900"
 },
 
 {
@@ -86,16 +77,11 @@
 	"teacher": "Rich Richardson",
 	"grade": "B+",
 	"comments": "Overall good intro class."
-	"name": "KittySaysMeow22"
 },
-=======
+{
   "class-code": "CS290",
   "teacher": "Rob Hess",
   "grade": "A+",
   "rating":"not sure how to store this yet",
   "comments": "Sitting in web dev... This class is so awesome!"
 },
-{
-
-}
->>>>>>> a8304e1b8fdffd7da5de9f7da74bb73bc4b22e47
