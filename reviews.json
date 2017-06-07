@@ -1,3 +1,4 @@
+[
 {
   "class-name": "CS290",
   "teacher": "Rob Hess",
@@ -84,4 +85,5 @@
   "grade": "A+",
   "rating":"not sure how to store this yet",
   "comments": "Sitting in web dev... This class is so awesome!"
-},
+}
+]
