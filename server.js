@@ -15,7 +15,7 @@ app.get('/', function(request, response, next){
   };
   response.render('main', templateArgs);
 });
-app.use(express.static(path.join(__dirname, 'final-project-rate-my-class-crew')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.listen(port, function(){
   console.log("listening on port: ", port);
 });
