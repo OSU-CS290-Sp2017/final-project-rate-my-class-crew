@@ -24,11 +24,10 @@ app.get('/trending', function(request, response, next){
 app.get('/:classID', function(request, response, next){
     var classID = request.params.classID;
     var classData = reviewData[classID];
-    console.log(classData);
     if(classData){
       var templateArgs = {
         classID: classID,
-        reviews: [classData]
+        reviews: classData.reviews
       }
       response.render('individualClass', templateArgs);
     }
