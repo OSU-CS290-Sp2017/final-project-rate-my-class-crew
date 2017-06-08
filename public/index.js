@@ -1,11 +1,11 @@
 
 //buttons
-var newPostButton = document.getElementById('create-twit-button');
+var newPostButton = document.getElementById('create-review-button');
 var exitButton = document.getElementsByClassName('modal-close-button');
 var cancelButton = document.getElementsByClassName('modal-cancel-button');
 var acceptButton  = document.getElementsByClassName('modal-accept-button');
 //modal stuff
-var modal = document.getElementById('create-twit-modal');
+var modal = document.getElementById('create-review-modal');
 var modalBackdrop = document.getElementById('modal-backdrop');
 //modal entry fields
 var classCode =document.getElementById('class-code-input');
@@ -108,21 +108,21 @@ acceptButton[0].addEventListener('click', addReview);
 
 //-----------Search Bar-------------------//
 
-var checkTwit = document.getElementsByClassName("twit-content");
+var checkReview = document.getElementsByClassName("review-content");
 var searchText = document.getElementById('navbar-search-input');
 var typing = document.getElementById('navbar-search-input');
 //var searchBut = document.getElementById('navbar-search-button');
 
 //searchBut.addEventListener('click', fucntion(){
 typing.addEventListener('input', function(){
-  for(var i =0; i<checkTwit.length; i++){
-    if(checkTwit[i].parentNode.classList.contains('hidden')){
-      if(checkTwit[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
-        checkTwit[i].parentNode.classList.remove("hidden");
+  for(var i =0; i<checkReview.length; i++){
+    if(checkReview[i].parentNode.classList.contains('hidden')){
+      if(checkReview[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
+        checkReview[i].parentNode.classList.remove("hidden");
       }
     }
-    if(!checkTwit[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
-      checkTwit[i].parentNode.classList.add('hidden');
+    if(!checkReview[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
+      checkReview[i].parentNode.classList.add('hidden');
     }
   }
 });
