@@ -15,37 +15,37 @@ var starRating;//no clue how to do starRating yet
 var otherText = document.getElementById('review-text-input');
 
 //star ratings
-var oneStar=document.getElementById("ratings-1");
-var twoStars=document.getElementById("ratings-2");
-var threeStars=document.getElementById("ratings-3");
-var fourStars=document.getElementById("ratings-4");
-var fiveStars=document.getElementById("ratings-5");
-var stars;
-
-oneStar.addEventListener('click', function(){
-	stars=1;
-	console.log("Number of stars selected ", stars);
-});
-
-twoStars.addEventListener('click', function(){
-	stars=2;
-	console.log("Number of stars selected ", stars);
-});
-
-threeStars.addEventListener('click', function(){
-	stars=3;
-	console.log("Number of stars selected ", stars);
-});
-
-fourStars.addEventListener('click', function(){
-	stars=4;
-	console.log("Number of stars selected ", stars);
-});
-
-fiveStars.addEventListener('click', function(){
-	stars=5;
-	console.log("Number of stars selected ", stars);
-});
+// var oneStar=document.getElementById("ratings-1");
+// var twoStars=document.getElementById("ratings-2");
+// var threeStars=document.getElementById("ratings-3");
+// var fourStars=document.getElementById("ratings-4");
+// var fiveStars=document.getElementById("ratings-5");
+// var stars;
+//
+// oneStar.addEventListener('click', function(){
+// 	stars=1;
+// 	console.log("Number of stars selected ", stars);
+// });
+//
+// twoStars.addEventListener('click', function(){
+// 	stars=2;
+// 	console.log("Number of stars selected ", stars);
+// });
+//
+// threeStars.addEventListener('click', function(){
+// 	stars=3;
+// 	console.log("Number of stars selected ", stars);
+// });
+//
+// fourStars.addEventListener('click', function(){
+// 	stars=4;
+// 	console.log("Number of stars selected ", stars);
+// });
+//
+// fiveStars.addEventListener('click', function(){
+// 	stars=5;
+// 	console.log("Number of stars selected ", stars);
+// });
 
 
 function openModal(){
@@ -67,7 +67,7 @@ function generateNewReviewElem(classTitle, prof, grade, comment){
     className: classTitle,
     teacher: prof,
     grade: grade,
-    comments: comment,
+    comments: comment
   }
   return reviewTemplate(reviewData);
 }
@@ -107,139 +107,53 @@ for (var i = 0; i < exitButton.length; i++) {
 acceptButton[0].addEventListener('click', addReview);
 
 
+
+
 //-----------Search Bar-------------------//
+var searchQuery = document.getElementById('navbar-search-input');
+var checkReview = document.getElementsByClassName('review-content');
+var searchButton = document.getElementById('navbar-search-button');
 
-var checkReview = document.getElementsByClassName("review-content");
-var searchText = document.getElementById('navbar-search-input');
-var typing = document.getElementById('navbar-search-input');
-//var searchBut = document.getElementById('navbar-search-button');
-
-//searchBut.addEventListener('click', fucntion(){
-typing.addEventListener('input', function(){
+function searchReviews(){
   for(var i =0; i<checkReview.length; i++){
-    if(checkReview[i].parentNode.classList.contains('hidden')){
-      if(checkReview[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
-        checkReview[i].parentNode.classList.remove("hidden");
-      }
-    }
-    if(!checkReview[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
-      checkReview[i].parentNode.classList.add('hidden');
-    }
+       if(checkReview[i].parentNode.classList.contains('hidden')){
+         if(checkReview[i].textContent.toLowerCase().includes(searchQuery.value.toLowerCase())){
+           checkReview[i].parentNode.classList.remove("hidden");
+         }
+       }
+       if(!checkReview[i].textContent.toLowerCase().includes(searchQuery.value.toLowerCase())){
+              checkReview[i].parentNode.classList.add('hidden');
+        }
   }
-});
+}
+
+
+
+
+searchButton.addEventListener('click', searchReviews);
+// var checkReview = document.getElementsByClassName("review-content");
+// var searchText = document.getElementById('navbar-search-input');
+// var typing = document.getElementById('navbar-search-input');
+// //var searchBut = document.getElementById('navbar-search-button');
+//
+// //searchBut.addEventListener('click', fucntion(){
+// typing.addEventListener('input', function(){
+//   for(var i =0; i<checkReview.length; i++){
+//     if(checkReview[i].parentNode.classList.contains('hidden')){
+//       if(checkReview[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
+//         checkReview[i].parentNode.classList.remove("hidden");
+//       }
+//     }
+//     if(!checkReview[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
+//       checkReview[i].parentNode.classList.add('hidden');
+//     }
+//   }
+// });
 
 
 /*
 // hess's stuff from assignment 5
-//
-// var allreviewElems = [];
-//
-// /*
-//  * This function shows the modal to create a review when the "create review"
-//  * button is clicked.
-//  */
-// function showCreatereviewModal() {
-//
-//   var modalBackdrop = document.getElementById('modal-backdrop');
-//   var createreviewModal = document.getElementById('create-review-modal');
-//
-//   // Show the modal and its backdrop.
-//   modalBackdrop.classList.remove('hidden');
-//   createreviewModal.classList.remove('hidden');
-//
-// }
-//
-// /*
-//  * This function hides the modal to create a review and clears any existing
-//  * values from the input fields whenever any of the modal close actions are
-//  * taken.
-//  */
-// function closeCreatereviewModal() {
-//
-//   var modalBackdrop = document.getElementById('modal-backdrop');
-//   var createreviewModal = document.getElementById('create-review-modal');
-//
-//   // Hide the modal and its backdrop.
-//   modalBackdrop.classList.add('hidden');
-//   createreviewModal.classList.add('hidden');
-//
-//   clearreviewInputValues();
-//
-// }
-//
-// /*
-//  * This function clears any value present in any of the review input elements.
-//  */
-// function clearreviewInputValues() {
-//
-//   var reviewInputElems = document.getElementsByClassName('review-input-element');
-//   for (var i = 0; i < reviewInputElems.length; i++) {
-//     var input = reviewInputElems[i].querySelector('input, textarea');
-//     input.value = '';
-//   }
-//
-// }
-//
-// /*
-//  * Create and return a new HTML element representing a single review, given the
-//  * review text and review attribution as arguments.  The review element has the
-//  * following structure:
-//  *
-//  * <article class="review">
-//  *   <div class="review-icon">
-//  *     <i class="fa fa-bullhorn"></i>
-//  *   </div>
-//  *   <div class="review-content">
-//  *     <p class="review-text">
-//  *       {{reviewText}}
-//  *     </p>
-//  *     <p class="review-attribution">
-//  *       <a href="#">{{reviewAttribution}}</a>
-//  *     </p>
-//  *   </div>
-//  * </article>
-//  */
-// function generateNewreviewElem(reviewText, reviewAuthor) {
-//
-//   var reviewTemplate = Handlebars.templates.review;
-//   var reviewData = {
-//     text: reviewText,
-//     author: reviewAuthor
-//   };
-//
-//   return reviewTemplate(reviewData);
-//
-// }
-//
-// /*
-//  * This function takes user input values from the "create review" modal,
-//  * generates a new review using them, and inserts that review into the document.
-//  */
-// function insertNewreview() {
-//
-//   var reviewText = document.getElementById('review-text-input').value;
-//   var reviewAttribution = document.getElementById('review-attribution-input').value;
-//
-//   /*
-//    * Only generate the new review if the user supplied values for both the review
-//    * text and the review attribution.  Give them an alert if they didn't.
-//    */
-//   if (reviewText && reviewAttribution) {
-//
-//       var newreviewElem = generateNewreviewElem(reviewText, reviewAttribution);
-//       var reviewContainer = document.querySelector('.review-container');
-//       reviewContainer.appendChild(newreviewElem);
-//       allreviewElems.push(newreviewElem);
-//
-//       closeCreatereviewModal();
-//
-//   } else {
-//
-//     alert('You must specify both the text and the author of the review!');
-//
-//   }
-// }
-//
+
 // /*
 //  * Perform a search over over all the reviews based on the search query the user
 //  * entered in the navbar.  Only display reviews that match the search query.
