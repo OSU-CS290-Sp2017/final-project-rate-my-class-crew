@@ -13,7 +13,7 @@ app.get('/', function(request, response, next){
   response.render('home');
 });
 
-app.get('/trending', function(request, response, next){
+app.get('/latest-reviews', function(request, response, next){
   console.log(reviewData);
   var templateArgs = {
     class: reviewData
