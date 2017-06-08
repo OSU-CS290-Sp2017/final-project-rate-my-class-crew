@@ -1,6 +1,6 @@
 
 //buttons
-var newPostButton = document.getElementById('create-review-button');
+var newReviewButton = document.getElementById('create-review-button');
 var exitButton = document.getElementsByClassName('modal-close-button');
 var cancelButton = document.getElementsByClassName('modal-cancel-button');
 var acceptButton  = document.getElementsByClassName('modal-accept-button');
@@ -14,6 +14,7 @@ var grade = document.getElementById('grade-received-input');
 var starRating;//no clue how to do starRating yet
 var otherText = document.getElementById('review-text-input');
 
+//star ratings
 var oneStar=document.getElementById("ratings-1");
 var twoStars=document.getElementById("ratings-2");
 var threeStars=document.getElementById("ratings-3");
@@ -60,7 +61,7 @@ function closeModal(){
   modalBackdrop.classList.add('hidden');
 }
 
-function generateNewPostElem(classTitle, prof, grade, comment){
+function generateNewReviewElem(classTitle, prof, grade, comment){
   var reviewTemplate = Handlebars.templates.review;
   var reviewData = {
     className: classTitle,
@@ -75,9 +76,9 @@ function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
     if (classCode.value && teacher.value && grade.value){
-      var newPostElem = generateNewPostElem(classCode.value, teacher.value, grade.value, otherText.value);
+      var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value);
       var reviewContainer = document.querySelector('.review-container');
-      reviewContainer.insertAdjacentHTML('beforeend', newPostElem);
+      reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
       closeModal();
     }
     else{
@@ -97,7 +98,7 @@ function clearModalFields(){
 
 /**************event listeners*****************/
 
-newPostButton.addEventListener('click', openModal);
+newReviewButton.addEventListener('click', openModal);
 //both exitBut and cancelBut have same length
 for (var i = 0; i < exitButton.length; i++) {
   exitButton[i].addEventListener('click', closeModal);
