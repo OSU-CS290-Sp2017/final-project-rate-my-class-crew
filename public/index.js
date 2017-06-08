@@ -14,7 +14,6 @@ var grade = document.getElementById('grade-received-input');
 var starRating;//no clue how to do starRating yet
 var otherText = document.getElementById('twit-text-input');
 
-
 function openModal(){
   console.log('opening modal');
   modal.classList.remove("hidden");
