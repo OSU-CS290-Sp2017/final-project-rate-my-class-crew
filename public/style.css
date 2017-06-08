@@ -381,3 +381,7 @@ label.star:before {
 	color: #ffca4f;
 	cursor: pointer;
 }
+
+.ratings:focus{
+	color: #ffca4f;
+}
