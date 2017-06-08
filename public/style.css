@@ -364,3 +364,20 @@ label.star:before {
 .class-card a:hover{
   color: #ffca4f;
 }
+
+.ratings{
+	background-color: white;
+	font-family: 'Amatic SC', cursive;
+	font-size: 25px;
+	border: none;
+	justify-content: left;
+}
+
+.rating-menu{
+	float:left;
+}
+
+.ratings:hover{
+	color: #ffca4f;
+	cursor: pointer;
+}
