@@ -1,32 +1,32 @@
 {
-  "CS": {
+  "Difference, Power, and Discrimination": {
     "reviews": [
       {
-        "className": "CS290",
-        "teacher": "Rob Hess",
-        "grade": "A+",
+        "className": "WGSS 230",
+        "teacher": "Ms. Piggy",
+        "grade": "B-",
         "rating":"not sure how to store this yet",
-        "comments": "This is the best class I've ever taken. Rob is the best teacher ever!"
+        "comments": "She is a crazy diva, don't take this class!"
       },
       {
-        "className": "CS160",
+        "className": "ART 359",
         "teacher": "Jen Jenson",
         "grade": "A+",
-        "comments": "This is the best class I've ever taken. Rob is the best teacher ever!"
+        "comments": "This is the best class I've ever taken. Jen is the best teacher ever!"
       },
       {
-      	"className": "CS 434",
+      	"className": "HST 202",
       	"teacher": "Ben Bennet",
       	"grade": "A-",
-      	"comments": "Best. Class. Ever."
+      	"comments": "Best. Class. Ever. I love the USA!"
       }
     ]
   },
 
-  "ME": {
+  "Biological Science": {
     "reviews": [
       {
-      	"className": "ME 334",
+      	"className": "BOT 101",
       	"teacher": "Bob Bobberson",
       	"grade": "B",
       	"comments": "Exams were challenging but professor was very knowledgable and friendly"
@@ -34,16 +34,16 @@
     ]
   },
 
-  "ECE": {
+  "Cultural Diversity": {
     "reviews": [
       {
-      	"className": "ECE 286",
+      	"className": "ANTH 319",
       	"teacher": "John Johnson",
       	"grade": "B+",
-      	"comments": "Fun class overall. The lab component isn't required for CS majors, but I recommend taking it!"
+      	"comments": "Fun class overall, but if you are looking for an easy bacc core class DO NOT TAKE THIS!"
       },
       {
-        "className": "ECE 222",
+        "className": "ENG 210",
         "teacher": "Frank Franklin",
         "grade": "B-",
         "comments": "Pretty challenging course but the TAs and professor are very helpful and caring."
@@ -51,16 +51,16 @@
     ]
   },
 
-  "BA": {
+  "Literature and the Arts": {
     "reviews": [
       {
-      	"className": "BA 456",
+      	"className": "ART 365",
       	"teacher": "Steve Stevenson",
       	"grade": "D+",
-      	"comments": "You won't pass this class unless you read the texbook"
+      	"comments": "You won't pass this class unless you read the texbook, not an easy bacc core."
       },
       {
-      	"className": "BA 101",
+      	"className": "ENG 215",
       	"teacher": "Rich Richardson",
       	"grade": "B+",
       	"comments": "Overall good intro class."
@@ -68,21 +68,21 @@
     ]
   },
 
-  "AG": {
+  "Physical Science": {
     "reviews": [
       {
-      	"className": "AG 222",
+      	"className": "CH 261",
       	"teacher": "Will Williams",
       	"grade": "A",
-      	"comments": "Awesome class. Awesome professor."
+      	"comments": "Awesome class. Awesome professor. Good for chemistry lovers!"
       }
     ]
   },
 
-  "ENG": {
+  "Social Processes and Institutions": {
     "reviews": [
       {
-      	"className": "ENG 104",
+      	"className": "ECON 201",
       	"teacher": "Matt Matthews",
       	"grade": "A-",
       	"comments": "Class has weekly quizzes but if you study you'll be fine."
@@ -90,21 +90,32 @@
     ]
   },
 
-  "PS": {
+  "Western Culture": {
     "reviews": [
       {
-      	"className": "PS 110",
+      	"className": "Crop 304",
       	"teacher": "Tom Tomlinson",
       	"grade": "B",
-      	"comments": "This class is about the Zombie Apocalypse. Enough said."
+      	"comments": "This class is about the plowing. Enough said."
       }
     ]
   },
 
-  "FIN": {
+  "Science, Technology, and Society": {
     "reviews": [
       {
-      	"className": "FIN 345",
+      	"className": "CS 391",
+      	"teacher": "Rob Hess",
+      	"grade": "A+",
+      	"comments": "This class is a fun discussion about technology.  You have to write a few papers but its not to bad! Rob is cool!"
+      }
+    ]
+  },
+
+  "Contemporary Global Issues": {
+    "reviews": [
+      {
+      	"className": "FOR 456",
       	"teacher": "Monty Montgomery",
       	"grade": "F",
       	"comments": "You have to go to class or you'll fail. I learned that the hard way."
