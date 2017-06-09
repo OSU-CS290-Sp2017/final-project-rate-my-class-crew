@@ -14,6 +14,13 @@ var grade = document.getElementById('grade-received-input');
 var starRating;//no clue how to do starRating yet
 var otherText = document.getElementById('review-text-input');
 
+//star ratings
+ var oneStar=document.getElementById("ratings-1");
+ var twoStars=document.getElementById("ratings-2");
+ var threeStars=document.getElementById("ratings-3");
+ var fourStars=document.getElementById("ratings-4");
+ var fiveStars=document.getElementById("ratings-5");
+ var stars;
 
 function openModal(){
   console.log('opening modal');
@@ -233,13 +240,7 @@ searchButton.addEventListener('click', searchReviews);
 //   }
 // }
 
-//star ratings
- var oneStar=document.getElementById("ratings-1");
- var twoStars=document.getElementById("ratings-2");
- var threeStars=document.getElementById("ratings-3");
- var fourStars=document.getElementById("ratings-4");
- var fiveStars=document.getElementById("ratings-5");
- var stars;
+
 
  oneStar.addEventListener('click', function(){
  	stars=1;
