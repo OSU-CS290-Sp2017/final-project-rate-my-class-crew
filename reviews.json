@@ -12,12 +12,14 @@
         "className": "ART 359",
         "teacher": "Jen Jenson",
         "grade": "A+",
+        "rating": "5",
         "comments": "This is the best class I've ever taken. Jen is the best teacher ever!"
       },
       {
       	"className": "HST 202",
       	"teacher": "Ben Bennet",
       	"grade": "A-",
+        "rating": "5",
       	"comments": "Best. Class. Ever. I love the USA!"
       }
     ]
@@ -29,6 +31,7 @@
       	"className": "BOT 101",
       	"teacher": "Bob Bobberson",
       	"grade": "B",
+        "rating": "4",
       	"comments": "Exams were challenging but professor was very knowledgable and friendly"
       }
     ]
@@ -40,12 +43,14 @@
       	"className": "ANTH 319",
       	"teacher": "John Johnson",
       	"grade": "B+",
+        "rating": "3",
       	"comments": "Fun class overall, but if you are looking for an easy bacc core class DO NOT TAKE THIS!"
       },
       {
         "className": "ENG 210",
         "teacher": "Frank Franklin",
         "grade": "B-",
+        "rating": "4",
         "comments": "Pretty challenging course but the TAs and professor are very helpful and caring."
       }
     ]
@@ -57,12 +62,14 @@
       	"className": "ART 365",
       	"teacher": "Steve Stevenson",
       	"grade": "D+",
+        "rating": "1",
       	"comments": "You won't pass this class unless you read the texbook, not an easy bacc core."
       },
       {
       	"className": "ENG 215",
       	"teacher": "Rich Richardson",
       	"grade": "B+",
+        "rating": "3",
       	"comments": "Overall good intro class."
       }
     ]
@@ -74,6 +81,7 @@
       	"className": "CH 261",
       	"teacher": "Will Williams",
       	"grade": "A",
+        "rating": "5",
       	"comments": "Awesome class. Awesome professor. Good for chemistry lovers!"
       }
     ]
@@ -85,6 +93,7 @@
       	"className": "ECON 201",
       	"teacher": "Matt Matthews",
       	"grade": "A-",
+        "rating": "4",
       	"comments": "Class has weekly quizzes but if you study you'll be fine."
       }
     ]
@@ -96,6 +105,7 @@
       	"className": "Crop 304",
       	"teacher": "Tom Tomlinson",
       	"grade": "B",
+        "rating": "4",
       	"comments": "This class is about the plowing. Enough said."
       }
     ]
@@ -107,6 +117,7 @@
       	"className": "CS 391",
       	"teacher": "Rob Hess",
       	"grade": "A+",
+        "rating": "5",
       	"comments": "This class is a fun discussion about technology.  You have to write a few papers but its not to bad! Rob is cool!"
       }
     ]
@@ -118,6 +129,7 @@
       	"className": "FOR 456",
       	"teacher": "Monty Montgomery",
       	"grade": "F",
+        "rating": "1",
       	"comments": "You have to go to class or you'll fail. I learned that the hard way."
       }
     ]
