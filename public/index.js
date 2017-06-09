@@ -70,7 +70,7 @@ function clearModalFields(){
   classCode.value = '';
    teacher.value = '';
    grade.value = '';
-  //var starRating;//no clue how to do starRating yet
+  clearSelectedRating();
   otherText.value = '';
 
 }
@@ -108,30 +108,56 @@ function searchReviews(){
 
 searchButton.addEventListener('click', searchReviews);
 
-
+function clearSelectedRating(){
+  var clickedList = document.getElementsByClassName('star-clicked');
+  for(var i=clickedList.length; i>0; i--){
+    console.log("removing class");
+    clickedList[i-1].classList.remove('star-clicked');
+  }
+}
 
 
  oneStar.addEventListener('click', function(){
  	stars=1;
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
  	console.log("Number of stars selected ", stars);
  });
 
  twoStars.addEventListener('click', function(){
  	stars=2;
- 	console.log("Number of stars selected ", stars);
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
+  twoStars.classList.add('star-clicked');
+  console.log("Number of stars selected ", stars);
  });
 
  threeStars.addEventListener('click', function(){
  	stars=3;
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
+  twoStars.classList.add('star-clicked');
+  threeStars.classList.add('star-clicked');
  	console.log("Number of stars selected ", stars);
  });
 
  fourStars.addEventListener('click', function(){
  	stars=4;
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
+  twoStars.classList.add('star-clicked');
+  threeStars.classList.add('star-clicked');
+  fourStars.classList.add('star-clicked');
 	console.log("Number of stars selected ", stars);
  });
 
  fiveStars.addEventListener('click', function(){
  	stars=5;
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
+  twoStars.classList.add('star-clicked');
+  threeStars.classList.add('star-clicked');
+  fourStars.classList.add('star-clicked');
+  fiveStars.classList.add('star-clicked');
  	console.log("Number of stars selected ", stars);
  });

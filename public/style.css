@@ -365,6 +365,7 @@ label.star:before {
   color: #ffca4f;
 }
 
+
 .ratings{
 	background-color: white;
 	font-family: 'Amatic SC', cursive;
@@ -372,7 +373,9 @@ label.star:before {
 	border: none;
 	justify-content: left;
 }
-
+.star-clicked{
+  color: #ffca4f;
+}
 .rating-menu{
 	float:left;
 }
@@ -384,4 +387,8 @@ label.star:before {
 
 .ratings:focus{
 	color: #ffca4f;
+  outline: none;
 }
+
+
+//modal star class thingy
