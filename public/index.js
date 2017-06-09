@@ -61,11 +61,12 @@ function closeModal(){
   modalBackdrop.classList.add('hidden');
 }
 
-function generateNewReviewElem(classTitle, prof, grade, comment){
+function generateNewReviewElem(classTitle, prof, grade, comment, stars){
   var reviewTemplate = Handlebars.templates.review;
   var reviewData = {
     className: classTitle,
     teacher: prof,
+	rating: stars,
     grade: grade,
     comments: comment
   }
