@@ -14,39 +14,6 @@ var grade = document.getElementById('grade-received-input');
 var starRating;//no clue how to do starRating yet
 var otherText = document.getElementById('review-text-input');
 
-//star ratings
-// var oneStar=document.getElementById("ratings-1");
-// var twoStars=document.getElementById("ratings-2");
-// var threeStars=document.getElementById("ratings-3");
-// var fourStars=document.getElementById("ratings-4");
-// var fiveStars=document.getElementById("ratings-5");
-// var stars;
-//
-// oneStar.addEventListener('click', function(){
-// 	stars=1;
-// 	console.log("Number of stars selected ", stars);
-// });
-//
-// twoStars.addEventListener('click', function(){
-// 	stars=2;
-// 	console.log("Number of stars selected ", stars);
-// });
-//
-// threeStars.addEventListener('click', function(){
-// 	stars=3;
-// 	console.log("Number of stars selected ", stars);
-// });
-//
-// fourStars.addEventListener('click', function(){
-// 	stars=4;
-// 	console.log("Number of stars selected ", stars);
-// });
-//
-// fiveStars.addEventListener('click', function(){
-// 	stars=5;
-// 	console.log("Number of stars selected ", stars);
-// });
-
 
 function openModal(){
   console.log('opening modal');
@@ -265,3 +232,36 @@ searchButton.addEventListener('click', searchReviews);
 //     }
 //   }
 // }
+
+//star ratings
+ var oneStar=document.getElementById("ratings-1");
+ var twoStars=document.getElementById("ratings-2");
+ var threeStars=document.getElementById("ratings-3");
+ var fourStars=document.getElementById("ratings-4");
+ var fiveStars=document.getElementById("ratings-5");
+ var stars;
+
+ oneStar.addEventListener('click', function(){
+ 	stars=1;
+ 	console.log("Number of stars selected ", stars);
+ });
+
+ twoStars.addEventListener('click', function(){
+ 	stars=2;
+ 	console.log("Number of stars selected ", stars);
+ });
+ 
+ threeStars.addEventListener('click', function(){
+ 	stars=3;
+ 	console.log("Number of stars selected ", stars);
+ });
+
+ fourStars.addEventListener('click', function(){
+ 	stars=4;
+	console.log("Number of stars selected ", stars);
+ });
+ 
+ fiveStars.addEventListener('click', function(){
+ 	stars=5;
+ 	console.log("Number of stars selected ", stars);
+ });
