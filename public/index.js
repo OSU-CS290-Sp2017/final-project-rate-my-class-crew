@@ -33,7 +33,7 @@ function generateNewReviewElem(classTitle, prof, grade, comment, stars){
   var reviewData = {
     className: classTitle,
     teacher: prof,
-	rating: stars,
+	   rating: stars,
     grade: grade,
     comments: comment
   }
@@ -43,8 +43,8 @@ function generateNewReviewElem(classTitle, prof, grade, comment, stars){
 function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
-    if (classCode.value && teacher.value && grade.value){
-      var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value);
+    if (classCode.value && teacher.value && grade.value && stars){
+      var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, stars);
       var reviewContainer = document.querySelector('.review-container');
       reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
       closeModal();
@@ -250,7 +250,7 @@ searchButton.addEventListener('click', searchReviews);
  	stars=2;
  	console.log("Number of stars selected ", stars);
  });
- 
+
  threeStars.addEventListener('click', function(){
  	stars=3;
  	console.log("Number of stars selected ", stars);
@@ -260,7 +260,7 @@ searchButton.addEventListener('click', searchReviews);
  	stars=4;
 	console.log("Number of stars selected ", stars);
  });
- 
+
  fiveStars.addEventListener('click', function(){
  	stars=5;
  	console.log("Number of stars selected ", stars);
