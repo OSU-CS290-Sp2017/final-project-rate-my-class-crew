@@ -37,6 +37,10 @@ app.get('/:classID', function(request, response, next){
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+ app.get('/*', function(req, res){
+	res.status(404).render('404Page');
+});
 app.listen(port, function(){
   console.log("listening on port: ", port);
 });
