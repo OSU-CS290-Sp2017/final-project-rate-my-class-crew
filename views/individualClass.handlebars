@@ -1,0 +1,14 @@
+{{> header}}
+
+  <h2>Viewing Reviews for: {{classID}}</h2>
+  <main class="review-container">
+
+
+      {{#each reviews}}
+        {{> review}}
+      {{/each}}
+
+
+  </main>
+
+  {{> modal}}
