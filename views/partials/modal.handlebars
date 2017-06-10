@@ -1,7 +1,7 @@
-<button type="button" id="create-twit-button"><i class="fa fa-telegram"></i></button>
+<button type="button" id="create-review-button"><i class="fa fa-telegram"></i></button>
 
 <div id="modal-backdrop" class="hidden"></div>
-<div id="create-twit-modal" class="hidden">
+<div id="create-review-modal" class="hidden">
   <div class="modal-dialog">
 
     <div class="modal-header">
@@ -10,22 +10,29 @@
     </div>
 
     <div class="modal-body">
-      <div class="twit-input-element">
+      <div class="review-input-element">
         <label for="class-code-input">Class Code</label>
         <input type="text" id="class-code-input">
       </div>
-      <div class="twit-input-element">
+      <div class="review-input-element">
         <label for="teacher-input">Teacher</label>
         <input type="text" id="teacher-input">
       </div>
-      <div class="twit-input-element">
+      <div class="review-input-element">
         <label for="grade-received-input">Grade Received</label>
         <input type="text" id="grade-received-input">
       </div>
-      <div class="twit-input-element">
+      <div class="review-input-element">
         <label for="rating-input">Rating</label>
-        <div class="stars">
-<form action="">
+        <!--<div class="stars"> -->
+		<div class= "rating-menu">
+				<button type="button" class= "ratings" id= "ratings-1"> 1 </button>
+				<button type="button" class= "ratings" id= "ratings-2"> 2 </button>
+				<button type="button" class= "ratings" id= "ratings-3"> 3 </button>
+				<button type="button" class= "ratings" id= "ratings-4"> 4 </button>
+				<button type="button" class= "ratings" id= "ratings-5"> 5 </button>
+
+<!-- <form action="">
 <input class="star star-5" id="star-5" type="radio" name="star"/>
 <label class="star star-5" for="star-5"></label>
 <input class="star star-4" id="star-4" type="radio" name="star"/>
@@ -36,20 +43,20 @@
 <label class="star star-2" for="star-2"></label>
 <input class="star star-1" id="star-1" type="radio" name="star"/>
 <label class="star star-1" for="star-1"></label>
-</form>
+</form> -->
 </div>
 
         <!--<input type="text" id="rating-input">-->
       </div>
-      <div class="twit-input-element">
-        <label for="twit-text-input">Anything else?</label>
-        <textarea id="twit-text-input"></textarea>
+      <div class="review-input-element">
+        <label for="review-text-input">Anything else?</label>
+        <textarea id="review-text-input"></textarea>
       </div>
     </div>
 
     <div class="modal-footer">
       <button type="button" class="modal-cancel-button">Cancel</button>
-      <button type="button" class="modal-accept-button">Create Twit</button>
+      <button type="button" class="modal-accept-button">Create Review</button>
     </div>
 
   </div>
