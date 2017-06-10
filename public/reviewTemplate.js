@@ -11,9 +11,6 @@ templates['review'] = template({"1":function(container,depth0,helpers,partials,d
     + alias4(((helper = (helper = helpers.teacher || (depth0 != null ? depth0.teacher : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"teacher","hash":{},"data":data}) : helper)))
     + "\r\n          </p>\r\n          <p class=\"class-grade\">\r\n            <b>Grade: </b> "
     + alias4(((helper = (helper = helpers.grade || (depth0 != null ? depth0.grade : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"grade","hash":{},"data":data}) : helper)))
-    + "\n          </p>\n          <p class=\"class-recommend\">\n            <b>Rating: </b> "
-    + alias4(((helper = (helper = helpers.rating || (depth0 != null ? depth0.rating : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"rating","hash":{},"data":data}) : helper)))
-    + "\n          </p>\n          <p class=\"class-comments\">\n            <b>Comments: </b> "
     + "\r\n          </p>\r\n          <p class=\"class-recommend\">\r\n            <b>Rating: </b> "
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.rating : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\r\n          </p>\r\n          <p class=\"class-comments\">\r\n            <b>Comments: </b> "
