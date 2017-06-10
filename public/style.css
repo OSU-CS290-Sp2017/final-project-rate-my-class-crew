@@ -340,6 +340,7 @@ label.star:before {
   border-radius: 5px;
   border-width: thick;
   border-color: #c1bdbd;
+  text-align: center;
 }
 
 .title-container{
