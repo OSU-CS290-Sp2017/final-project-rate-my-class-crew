@@ -35,12 +35,12 @@ function closeModal(){
   modalBackdrop.classList.add('hidden');
 }
 
-function generateNewReviewElem(classTitle, prof, grade, comment, stars){
+function generateNewReviewElem(classTitle, prof, grade, comment, rating){
   var reviewTemplate = Handlebars.templates.review;
   var reviewData = {
     className: classTitle,
     teacher: prof,
-	   rating: stars,
+	   rating: rating,
     grade: grade,
     comments: comment
   }
@@ -51,7 +51,11 @@ function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
     if (classCode.value && teacher.value && grade.value && stars){
-      var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, stars);
+      var temp = [];
+      for (var i=0; i<stars; i++){
+        temp[i]=i;
+      }
+      var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, temp);
       var reviewContainer = document.querySelector('.review-container');
       reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
       closeModal();
@@ -66,7 +70,7 @@ function clearModalFields(){
   classCode.value = '';
    teacher.value = '';
    grade.value = '';
-  //var starRating;//no clue how to do starRating yet
+  clearSelectedRating();
   otherText.value = '';
 
 }
@@ -102,167 +106,58 @@ function searchReviews(){
   }
 }
 
-
-
-
 searchButton.addEventListener('click', searchReviews);
-// var checkReview = document.getElementsByClassName("review-content");
-// var searchText = document.getElementById('navbar-search-input');
-// var typing = document.getElementById('navbar-search-input');
-// //var searchBut = document.getElementById('navbar-search-button');
-//
-// //searchBut.addEventListener('click', fucntion(){
-// typing.addEventListener('input', function(){
-//   for(var i =0; i<checkReview.length; i++){
-//     if(checkReview[i].parentNode.classList.contains('hidden')){
-//       if(checkReview[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
-//         checkReview[i].parentNode.classList.remove("hidden");
-//       }
-//     }
-//     if(!checkReview[i].textContent.toLowerCase().includes(searchText.value.toLowerCase())){
-//       checkReview[i].parentNode.classList.add('hidden');
-//     }
-//   }
-// });
 
-
-/*
-// hess's stuff from assignment 5
-
-// /*
-//  * Perform a search over over all the reviews based on the search query the user
-//  * entered in the navbar.  Only display reviews that match the search query.
-//  * Display all reviews if the search query is empty.
-//  */
-// function doreviewSearch() {
-//
-//   // Grab the search query, make sure it's not null, and do some preproessing.
-//   var searchQuery = document.getElementById('navbar-search-input').value;
-//   searchQuery = searchQuery ? searchQuery.trim().toLowerCase() : '';
-//
-//   // Remove all reviews from the review container temporarily.
-//   var reviewContainer = document.querySelector('.review-container');
-//   while (reviewContainer.lastChild) {
-//     reviewContainer.removeChild(reviewContainer.lastChild);
-//   }
-//
-//   /*
-//    * Loop through the collection of all reviews and add reviews back into the DOM
-//    * if they contain the search term or if the search term is empty.
-//    */
-//   allreviewElems.forEach(function (reviewElem) {
-//     if (!searchQuery || reviewElem.textContent.toLowerCase().indexOf(searchQuery) !== -1) {
-//       reviewContainer.appendChild(reviewElem);
-//     }
-//   });
-//
-// }
-//
-//
-// /*
-//  * Wait until the DOM content is loaded, and then hook up UI interactions, etc.
-//  */
-// window.addEventListener('DOMContentLoaded', function () {
-//
-//   // Remember all of the existing reviews in an array that we can use for search.
-//   var reviewElemsCollection = document.getElementsByClassName('review');
-//   for (var i = 0; i < reviewElemsCollection.length; i++) {
-//     allreviewElems.push(reviewElemsCollection[i]);
-//   }
-//
-//   var createreviewButton = document.getElementById('create-review-button');
-//   createreviewButton.addEventListener('click', showCreatereviewModal);
-//
-//   var modalCloseButton = document.querySelector('#create-review-modal .modal-close-button');
-//   modalCloseButton.addEventListener('click', closeCreatereviewModal);
-//
-//   var modalCancalButton = document.querySelector('#create-review-modal .modal-cancel-button');
-//   modalCancalButton.addEventListener('click', closeCreatereviewModal);
-//
-//   var modalAcceptButton = document.querySelector('#create-review-modal .modal-accept-button');
-//   modalAcceptButton.addEventListener('click', insertNewreview);
-//
-//   var searchButton = document.getElementById('navbar-search-button');
-//   searchButton.addEventListener('click', doreviewSearch);
-//
-//   var searchInput = document.getElementById('navbar-search-input');
-//   searchInput.addEventListener('input', doreviewSearch);
-//
-// });
-
-
-
-
-
-
-
-
-// //erin's server stuff
-// //buttons
-// var newReviewButton = document.getElementsById('create-review-button');
-// //modal variables
-// var modalBackdrop = document.getElementsById('modal-backdrop');
-// var createReviewModal = document.getElementsById('create-review-modal');
-// //fields within modal
-// var classCode = document.getElementsById('class-code-input');
-// var teacher = document.getElementsById('teacher-input');
-// var grade = document.getElementsById('grade-recieved-input');
-// var
-//
-// //function "unhides" modal and modal backdrop
-// newReviewButton.addEventListener('click', function(){
-//   modalBackdrop.classList.remove('hidden');
-//   createReviewModal.classList.remove('hidden');
-// });
-//
-// function hideModal(){
-//   modalBackdrop.classList.add('hidden');
-//   createReviewModal.classList.add('hidden');
-//
-//   //call to clear all stuff in modal on close
-//   clearModalFields();
-// }
-//
-// function clearModalFields(){
-//   var clearArray = document.getElementsByClassName('review-input-element');
-//   for(var i=0, i<clearArray.length, i++){
-//     if(clearArray[i].querySelector('input, text')){
-//       var input = clearArray[i].querySelector('input, text');
-//       input.value = '';
-//     }
-//     else if (clearArray[i].querySelector('input, textarea')) {
-//       var input = clearArray[i].querySelector('input, textarea')
-//       input.value = '';
-//     }
-//     else{
-//
-//     }
-//   }
-// }
-
+function clearSelectedRating(){
+  var clickedList = document.getElementsByClassName('star-clicked');
+  for(var i=clickedList.length; i>0; i--){
+    console.log("removing class");
+    clickedList[i-1].classList.remove('star-clicked');
+  }
+}
 
 
  oneStar.addEventListener('click', function(){
  	stars=1;
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
  	console.log("Number of stars selected ", stars);
  });
 
  twoStars.addEventListener('click', function(){
  	stars=2;
- 	console.log("Number of stars selected ", stars);
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
+  twoStars.classList.add('star-clicked');
+  console.log("Number of stars selected ", stars);
  });
 
  threeStars.addEventListener('click', function(){
  	stars=3;
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
+  twoStars.classList.add('star-clicked');
+  threeStars.classList.add('star-clicked');
  	console.log("Number of stars selected ", stars);
  });
 
  fourStars.addEventListener('click', function(){
  	stars=4;
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
+  twoStars.classList.add('star-clicked');
+  threeStars.classList.add('star-clicked');
+  fourStars.classList.add('star-clicked');
 	console.log("Number of stars selected ", stars);
  });
 
  fiveStars.addEventListener('click', function(){
  	stars=5;
+  clearSelectedRating();
+  oneStar.classList.add('star-clicked');
+  twoStars.classList.add('star-clicked');
+  threeStars.classList.add('star-clicked');
+  fourStars.classList.add('star-clicked');
+  fiveStars.classList.add('star-clicked');
  	console.log("Number of stars selected ", stars);
  });
