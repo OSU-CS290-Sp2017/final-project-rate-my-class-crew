@@ -68,7 +68,7 @@ a:focus {
 .navbar-search {
   float: right;
   margin-right: 20px;
-  padding-left: 825px;
+  padding: 0;
   line-height: 38px;
 }
 
@@ -122,7 +122,7 @@ a:focus {
   margin: 2px;
   padding: 20px;
   border: 1px solid #dadada;
-  border-radius: 2px;
+  border-radius: 50px;
   background-color: #fff;
 }
 .fa-star{
@@ -373,6 +373,7 @@ label.star:before {
   color: #ffca4f;
 }
 
+
 .ratings{
     background-color: white;
     font-family: 'Amatic SC', cursive;
@@ -405,7 +406,7 @@ label.star:before {
 
 .dropdown-menu{
 	position: relative;
-	/*padding-right: 800px;*/
+	padding-right: 800px;
 }
 
 .menu-content{
@@ -414,7 +415,6 @@ label.star:before {
 	list-style-type: none;
 	margin:0px;
 	padding: 10px 15px;
-	min-width: 350px;
 	z-index: 10; /*so menu doesn't get hidden behind other content on page*/
 	background-color: #777676;
 }
