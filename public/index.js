@@ -200,7 +200,63 @@ function clearSelectedRating(){
  	console.log("Number of stars selected ", stars);
  });
 
-
+var tags = document.getElementsByClassName('tags');
+tags[0].addEventListener('click', function(){
+  if(tags[0].classList.contains('tag-clicked')){
+    tags[0].classList.remove('tag-clicked')
+  }
+  else{
+    tags[0].classList.add('tag-clicked');
+  }
+});
+tags[1].addEventListener('click', function(){
+  if(tags[1].classList.contains('tag-clicked')){
+    tags[1].classList.remove('tag-clicked')
+  }
+  else{
+    tags[1].classList.add('tag-clicked');
+  }
+});
+tags[2].addEventListener('click', function(){
+  if(tags[2].classList.contains('tag-clicked')){
+    tags[2].classList.remove('tag-clicked')
+  }
+  else{
+    tags[2].classList.add('tag-clicked');
+  }
+});
+tags[3].addEventListener('click', function(){
+  if(tags[3].classList.contains('tag-clicked')){
+    tags[3].classList.remove('tag-clicked')
+  }
+  else{
+    tags[3].classList.add('tag-clicked');
+  }
+});
+tags[4].addEventListener('click', function(){
+  if(tags[4].classList.contains('tag-clicked')){
+    tags[4].classList.remove('tag-clicked')
+  }
+  else{
+    tags[4].classList.add('tag-clicked');
+  }
+});
+tags[5].addEventListener('click', function(){
+  if(tags[5].classList.contains('tag-clicked')){
+    tags[5].classList.remove('tag-clicked')
+  }
+  else{
+    tags[5].classList.add('tag-clicked');
+  }
+});
+tags[6].addEventListener('click', function(){
+  if(tags[6].classList.contains('tag-clicked')){
+    tags[6].classList.remove('tag-clicked')
+  }
+  else{
+    tags[6].classList.add('tag-clicked');
+  }
+});
 
 
 //hides add review button on all reviews page
