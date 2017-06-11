@@ -47,8 +47,6 @@ function generateNewReviewElem(classTitle, prof, grade, comment, rating){
   return reviewTemplate(reviewData);
 }
 /*well thid doesn't work...*/
-
-
 function getCoreIdFromLocation(){
   var pathComponents = window.location.pathname.split('/');
   if (pathComponents[0] !== '') {
@@ -56,8 +54,6 @@ function getCoreIdFromLocation(){
   }
   return pathComponents[1];
 }
-
-
 function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
@@ -66,6 +62,7 @@ function addReview(){
       var temp = [];
       for (var i=0; i<stars; i++){
         temp[i]=i;
+
       }
       storeClassReview(coreID, classCode.value, teacher.value, temp, grade.value, otherText.value, function (err){
 
@@ -76,46 +73,18 @@ function addReview(){
           reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
           closeModal();
         });
-      }
+
+
+      var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, temp);
+      var reviewContainer = document.querySelector('.review-container');
+      reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
+      closeModal();
+    }
     else{
       alert("You left something blank ya ding dong");
     }
 
 }
-
-
-
-
-function storeClassReview(classID, className, teacher, rating, grade, comments, callback) {
-  console.log("storeClassReview function");
-  var postURL = "/" + classID + "/createReview";
-
-  console.log("url ", postURL);
-
-  var postRequest = new XMLHttpRequest();
-  postRequest.open('POST', postURL);
-  postRequest.setRequestHeader('Content-Type', 'application/json');
-
-  postRequest.addEventListener('load', function (event) {
-    var error;
-    if (event.target.status !== 200) {
-      error = event.target.response;
-    }
-    callback(error);
-  });
-
-  var postBody = {
-    className: className,
-    teacher: teacher,
-    rating: rating,
-    grade: grade,
-    comments: comments
-  };
-  postRequest.send(JSON.stringify(postBody));
-
-}
-
-
 
 function clearModalFields(){
   classCode.value = '';

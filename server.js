@@ -47,9 +47,37 @@ app.get('/bacc-core/:category', function (req, res, next) {
 app.get('/:classID', function(request, response, next){
     var classID = request.params.classID;
     var classData = reviewData[classID];
+    if(classID == "DPD"){
+      var classT = "Difference, Power, Discrimination";
+    }
+    else if(classID == "BS"){
+      var classT = "Biological Science";
+    }
+    else if(classID == "CD"){
+      var classT = "Cultural Diversity";
+    }
+    else if(classID == "LA"){
+      var classT = "Literature and the Arts";
+    }
+    else if(classID == "PS"){
+      var classT = "Physical Science";
+    }
+    else if(classID == "SPI"){
+      var classT = "Social Processes and Institutions";
+    }
+    else if(classID == "WC"){
+      var classT = "Western Culture";
+    }
+    else if(classID == "STS"){
+      var classT = "Science, Technology, and Society";
+    }
+    else if(classID == "CGI"){
+      var classT = "Contemporary Global Issues";
+    }
     if(classData){
+
       var templateArgs = {
-        classID: classID,
+        classID: classT,
         reviews: classData.reviews
       }
       response.render('individualClass', templateArgs);
