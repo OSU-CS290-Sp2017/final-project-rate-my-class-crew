@@ -409,7 +409,7 @@ label.star:before {
 	list-style-type: none;
 	margin:0px;
 	padding: 10px 15px;
-	z-index: 10;
+	z-index: 10; /*so menu doesn't get hidden behind other content on page*/
 	background-color: #777676;
 }
 
