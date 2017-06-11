@@ -30,15 +30,16 @@ a {
   margin: 0 0 0 20px;
   padding: 0;
   list-style-type: none;
+  display: inline-block;
 }
 
 .navitem a{
-  display: inline-block;
+ /* display: inline-block;*/
   color: white;
   padding-right: 10px;
 }
 
-li {
+li.navitem.navlink {
   display: inline-block;
 }
 //do we still need this??? -erin
@@ -388,8 +389,36 @@ label.star:before {
 
 .ratings:focus{
 	color: #ffca4f;
-  outline: none
+	outline: none
 }
 
+/*Nav bar drop down menu styling*/
 
-//modal star class thingy
+/*li.navitem.navlink.dropdown-menu{
+	vertical-align: middle;
+}*/
+
+.dropdown-menu{
+	position: relative;
+	padding-right: 900px;
+}
+
+.menu-content{
+	display:none;
+	position: absolute; 
+	list-style-type: none;
+	margin:0px;
+	padding: 10px 15px;
+	background-color: #777676;
+}
+
+li{
+	height: 40px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.dropdown-menu:hover .menu-content{
+	display:block;
+}
+
