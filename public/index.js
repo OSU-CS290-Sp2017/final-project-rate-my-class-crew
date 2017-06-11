@@ -199,3 +199,14 @@ function clearSelectedRating(){
   fiveStars.classList.add('star-clicked');
  	console.log("Number of stars selected ", stars);
  });
+
+
+
+
+//testing something for the modal
+var pathname = location.pathname;
+
+if(pathname=="/trending"){
+  console.log("gotta hide the ad review button");
+  newReviewButton.classList.add('hidden');
+}
