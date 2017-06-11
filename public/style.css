@@ -1,7 +1,7 @@
 body {
   font-family: 'Amatic SC', cursive;
   margin: 0;
-  background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t34.0-12/19113398_1385649554824249_677726430_n.png?oh=a76a8d2707713e26e2005df24402cbf6&oe=594059FD);
+   background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t34.0-12/19113398_1385649554824249_677726430_n.png?oh=a76a8d2707713e26e2005df24402cbf6&oe=594059FD);
 }
 
 a {
@@ -109,11 +109,22 @@ a:focus {
   margin: 50px 10%;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
 }
 
 .reviews-intro{
-  padding-left: 90px;
-  font-size: 28px;
+  margin-left: 90px;
+  font-size: 35px;
+  color:  #ffca4f;
+  font-weight: bold;
+  background-color: white;
+  width: 33%;
+  margin-left: 35%;
+  margin-right: 20%;
+  border-radius: 30px;
+  text-align: center;
+  padding: 7px;
+
 }
 
 .review {
@@ -406,7 +417,7 @@ label.star:before {
 
 .dropdown-menu{
 	position: relative;
-	padding-right: 800px;
+  padding-right: 1350px;
 }
 
 .menu-content{
@@ -417,6 +428,8 @@ label.star:before {
 	padding: 10px 15px;
 	z-index: 10; /*so menu doesn't get hidden behind other content on page*/
 	background-color: #777676;
+
+
 }
 
 li{
