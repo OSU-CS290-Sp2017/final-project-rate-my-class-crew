@@ -40,7 +40,7 @@ function generateNewReviewElem(classTitle, prof, grade, comment, rating){
   var reviewData = {
     className: classTitle,
     teacher: prof,
-	   rating: rating,
+	  rating: rating,
     grade: grade,
     comments: comment
   }
@@ -63,12 +63,14 @@ function addReview(){
     //holdAtt.text = userAtt.value;
     var coreID = getCoreIdFromLocation();
     if (classCode.value && teacher.value && grade.value && stars){
-      storeClassReview(coreID, classCode.value, teacher.value, stars, grade.value, otherText.value, function (err){
+      var temp = [];
+      for (var i=0; i<stars; i++){
+        temp[i]=i;
+      }
+      storeClassReview(coreID, classCode.value, teacher.value, temp, grade.value, otherText.value, function (err){
 
-          var temp = [];
-          for (var i=0; i<stars; i++){
-            temp[i]=i;
-          }
+
+
           var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, temp);
           var reviewContainer = document.querySelector('.review-container');
           reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
