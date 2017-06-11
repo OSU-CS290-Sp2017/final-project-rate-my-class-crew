@@ -40,15 +40,13 @@ function generateNewReviewElem(classTitle, prof, grade, comment, rating){
   var reviewData = {
     className: classTitle,
     teacher: prof,
-	   rating: rating,
+	  rating: rating,
     grade: grade,
     comments: comment
   }
   return reviewTemplate(reviewData);
 }
 /*well thid doesn't work...*/
-
-
 function getCoreIdFromLocation(){
   var pathComponents = window.location.pathname.split('/');
   if (pathComponents[0] !== '') {
@@ -56,34 +54,28 @@ function getCoreIdFromLocation(){
   }
   return pathComponents[1];
 }
-
-
 function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
     var coreID = getCoreIdFromLocation();
     if (classCode.value && teacher.value && grade.value && stars){
-      storeClassReview(coreID, classCode.value, teacher.value, stars, grade.value, otherText.value, function (err){
+      var temp = [];
+      for (var i=0; i<stars; i++){
+        temp[i]=i;
+      }
+      storeClassReview(coreID, classCode.value, teacher.value, temp, grade.value, otherText.value, function (err){
 
-          var temp = [];
-          for (var i=0; i<stars; i++){
-            temp[i]=i;
-          }
           var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, temp);
           var reviewContainer = document.querySelector('.review-container');
           reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
           closeModal();
         });
-      }
+    }
     else{
       alert("You left something blank ya ding dong");
     }
 
 }
-
-
-
-
 function storeClassReview(classID, className, teacher, rating, grade, comments, callback) {
   console.log("storeClassReview function");
   var postURL = "/" + classID + "/createReview";
@@ -112,9 +104,6 @@ function storeClassReview(classID, className, teacher, rating, grade, comments, 
   postRequest.send(JSON.stringify(postBody));
 
 }
-
-
-
 function clearModalFields(){
   classCode.value = '';
    teacher.value = '';
