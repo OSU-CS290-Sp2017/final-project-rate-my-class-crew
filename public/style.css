@@ -410,7 +410,7 @@ label.star:before {
 
 .menu-content{
 	display:none;
-	position: absolute; 
+	position: absolute;
 	list-style-type: none;
 	margin:0px;
 	padding: 10px 15px;
@@ -428,7 +428,7 @@ li{
 .dropdown-menu:hover .menu-content{
 	display:block;
 }
-    
+
 .category {
   background-color: white;
     font-family: 'Amatic SC', cursive;
@@ -448,6 +448,19 @@ li{
   outline: none
 }
 
+.tags {
+  background-color: #ffca4f;
+  color: white;
+  border: none;
+  margin: 2px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
 
+.tags:hover {
+  background-color: #777676;
+}
 
-
+.tag-clicked {
+  background-color: #777676;
+}

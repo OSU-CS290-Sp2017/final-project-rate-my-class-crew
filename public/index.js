@@ -203,7 +203,7 @@ function clearSelectedRating(){
 
 
 
-//testing something for the modal
+//hides add review button on all reviews page
 var pathname = location.pathname;
 
 if(pathname=="/trending"){
