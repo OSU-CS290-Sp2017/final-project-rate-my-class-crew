@@ -40,13 +40,15 @@ function generateNewReviewElem(classTitle, prof, grade, comment, rating){
   var reviewData = {
     className: classTitle,
     teacher: prof,
-	  rating: rating,
+	   rating: rating,
     grade: grade,
     comments: comment
   }
   return reviewTemplate(reviewData);
 }
 /*well thid doesn't work...*/
+
+
 function getCoreIdFromLocation(){
   var pathComponents = window.location.pathname.split('/');
   if (pathComponents[0] !== '') {
@@ -54,28 +56,34 @@ function getCoreIdFromLocation(){
   }
   return pathComponents[1];
 }
+
+
 function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
     var coreID = getCoreIdFromLocation();
     if (classCode.value && teacher.value && grade.value && stars){
-      var temp = [];
-      for (var i=0; i<stars; i++){
-        temp[i]=i;
-      }
-      storeClassReview(coreID, classCode.value, teacher.value, temp, grade.value, otherText.value, function (err){
+      storeClassReview(coreID, classCode.value, teacher.value, stars, grade.value, otherText.value, function (err){
 
+          var temp = [];
+          for (var i=0; i<stars; i++){
+            temp[i]=i;
+          }
           var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, temp);
           var reviewContainer = document.querySelector('.review-container');
           reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
           closeModal();
         });
-    }
+      }
     else{
       alert("You left something blank ya ding dong");
     }
 
 }
+
+
+
+
 function storeClassReview(classID, className, teacher, rating, grade, comments, callback) {
   console.log("storeClassReview function");
   var postURL = "/" + classID + "/createReview";
@@ -104,6 +112,9 @@ function storeClassReview(classID, className, teacher, rating, grade, comments, 
   postRequest.send(JSON.stringify(postBody));
 
 }
+
+
+
 function clearModalFields(){
   classCode.value = '';
    teacher.value = '';
@@ -199,3 +210,61 @@ function clearSelectedRating(){
   fiveStars.classList.add('star-clicked');
  	console.log("Number of stars selected ", stars);
  });
+
+var tags = document.getElementsByClassName('tags');
+tags[0].addEventListener('click', function(){
+  if(tags[0].classList.contains('tag-clicked')){
+    tags[0].classList.remove('tag-clicked')
+  }
+  else{
+    tags[0].classList.add('tag-clicked');
+  }
+});
+tags[1].addEventListener('click', function(){
+  if(tags[1].classList.contains('tag-clicked')){
+    tags[1].classList.remove('tag-clicked')
+  }
+  else{
+    tags[1].classList.add('tag-clicked');
+  }
+});
+tags[2].addEventListener('click', function(){
+  if(tags[2].classList.contains('tag-clicked')){
+    tags[2].classList.remove('tag-clicked')
+  }
+  else{
+    tags[2].classList.add('tag-clicked');
+  }
+});
+tags[3].addEventListener('click', function(){
+  if(tags[3].classList.contains('tag-clicked')){
+    tags[3].classList.remove('tag-clicked')
+  }
+  else{
+    tags[3].classList.add('tag-clicked');
+  }
+});
+tags[4].addEventListener('click', function(){
+  if(tags[4].classList.contains('tag-clicked')){
+    tags[4].classList.remove('tag-clicked')
+  }
+  else{
+    tags[4].classList.add('tag-clicked');
+  }
+});
+tags[5].addEventListener('click', function(){
+  if(tags[5].classList.contains('tag-clicked')){
+    tags[5].classList.remove('tag-clicked')
+  }
+  else{
+    tags[5].classList.add('tag-clicked');
+  }
+});
+tags[6].addEventListener('click', function(){
+  if(tags[6].classList.contains('tag-clicked')){
+    tags[6].classList.remove('tag-clicked')
+  }
+  else{
+    tags[6].classList.add('tag-clicked');
+  }
+});
