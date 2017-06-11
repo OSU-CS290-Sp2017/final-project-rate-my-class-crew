@@ -15,8 +15,10 @@
           <p class="class-recommend">
             <b>Rating: </b> {{#each rating}} <i class="fa fa-star"></i> {{/each}}
           </p>
+          {{#if comments}}
           <p class="class-comments">
             <b>Comments: </b> {{comments}}
           </p>
+          {{/if}}
         </div>
       </article>
