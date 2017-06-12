@@ -174,6 +174,7 @@ acceptButton[0].addEventListener('click', addReview);
 var searchQuery = document.getElementById('navbar-search-input');
 var checkReview = document.getElementsByClassName('review-content');
 var searchButton = document.getElementById('navbar-search-button');
+var searchInput= document.getElementById('navbar-search-input');
 
 function searchReviews(){
   for(var i =0; i<checkReview.length; i++){
@@ -189,6 +190,7 @@ function searchReviews(){
 }
 
 searchButton.addEventListener('click', searchReviews);
+searchInput.addEventListener('input', searchReviews);
 
 
 //---------modal stars-------------------------
