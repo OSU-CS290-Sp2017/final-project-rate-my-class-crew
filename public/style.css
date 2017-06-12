@@ -481,3 +481,15 @@ li{
 .tag-clicked {
   background-color: #777676;
 }
+
+.social-media-bar{
+	background-color: #777676;
+	height: 50px;
+	padding-bottom: 0px;
+	margin:0px;
+	float:center;
+	color: #fff;
+	font-weight: none;
+	font-size: 25px;
+
+}
