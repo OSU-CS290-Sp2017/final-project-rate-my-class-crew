@@ -23,26 +23,25 @@ var otherText = document.getElementById('review-text-input');
  var stars;
 
 function openModal(){
-  console.log('opening modal');
   modal.classList.remove("hidden");
   modalBackdrop.classList.remove("hidden");
 }
 
 function closeModal(){
-  console.log('closing modal');
   clearModalFields();
   modal.classList.add('hidden');
   modalBackdrop.classList.add('hidden');
 }
 
-function generateNewReviewElem(classTitle, prof, grade, comment, rating){
+function generateNewReviewElem(classTitle, prof, grade, comment, rating, tags){
   var reviewTemplate = Handlebars.templates.review;
   var reviewData = {
     className: classTitle,
     teacher: prof,
 	  rating: rating,
     grade: grade,
-    comments: comment
+    comments: comment,
+    tags: tags
   }
   return reviewTemplate(reviewData);
 }
@@ -54,6 +53,37 @@ function getCoreIdFromLocation(){
   }
   return pathComponents[1];
 }
+
+function getTagList(list){
+
+  var retList=[];
+  for(var i=0; i< list.length; i++){
+    if (list[i].classList.contains('grader')){
+      retList[i]="Tough Grader";
+    }
+    if (list[i].classList.contains('homework')){
+      retList[i]="Lots of Homework";
+    }
+    if (list[i].classList.contains('participation')){
+      retList[i]="Participation Matters";
+    }
+    if (list[i].classList.contains('lecture')){
+      retList[i]="Lecture Heavy";
+    }
+    if (list[i].classList.contains('papers')){
+      retList[i]="Lots of Papers";
+    }
+    if (list[i].classList.contains('projects')){
+      retList[i]="Group Projects";
+    }
+    if (list[i].classList.contains('reading')){
+      retList[i]="Lots of Reading";
+    }
+  }
+
+  return (retList);
+}
+
 function addReview(){
     //holdText.textContent = newText.value;
     //holdAtt.text = userAtt.value;
@@ -63,9 +93,13 @@ function addReview(){
       for (var i=0; i<stars; i++){
         temp[i]=i;
       }
-      storeClassReview(coreID, classCode.value, teacher.value, temp, grade.value, otherText.value, function (err){
 
-          var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, temp);
+      var tempList=document.getElementsByClassName('tag-clicked');
+      var tempTags= getTagList(tempList);
+
+      storeClassReview(coreID, classCode.value, teacher.value, temp, grade.value, otherText.value, tempTags, function (err){
+
+          var newReviewElem = generateNewReviewElem(classCode.value, teacher.value, grade.value, otherText.value, temp, tempTags);
           var reviewContainer = document.querySelector('.review-container');
           reviewContainer.insertAdjacentHTML('beforeend', newReviewElem);
           closeModal();
@@ -76,12 +110,9 @@ function addReview(){
     }
 
 }
-function storeClassReview(classID, className, teacher, rating, grade, comments, callback) {
-  console.log("storeClassReview function");
+function storeClassReview(classID, className, teacher, rating, grade, comments, tags, callback) {
+
   var postURL = "/" + classID + "/createReview";
-
-  console.log("url ", postURL);
-
   var postRequest = new XMLHttpRequest();
   postRequest.open('POST', postURL);
   postRequest.setRequestHeader('Content-Type', 'application/json');
@@ -99,7 +130,8 @@ function storeClassReview(classID, className, teacher, rating, grade, comments, 
     teacher: teacher,
     rating: rating,
     grade: grade,
-    comments: comments
+    comments: comments,
+    tags: tags
   };
   postRequest.send(JSON.stringify(postBody));
 
@@ -110,9 +142,21 @@ function clearModalFields(){
    grade.value = '';
   clearSelectedRating();
   otherText.value = '';
+  clearSelectedTags();
 
 }
-
+function clearSelectedRating(){
+  var clickedList = document.getElementsByClassName('star-clicked');
+  for(var i=clickedList.length; i>0; i--){
+    clickedList[i-1].classList.remove('star-clicked');
+  }
+}
+function clearSelectedTags(){
+  var clickedList= document.getElementsByClassName('tag-clicked');
+  for(var i=clickedList.length; i>0; i--){
+    clickedList[i-1].classList.remove('tag-clicked');
+  }
+}
 /**************event listeners*****************/
 
 newReviewButton.addEventListener('click', openModal);
@@ -146,20 +190,12 @@ function searchReviews(){
 
 searchButton.addEventListener('click', searchReviews);
 
-function clearSelectedRating(){
-  var clickedList = document.getElementsByClassName('star-clicked');
-  for(var i=clickedList.length; i>0; i--){
-    console.log("removing class");
-    clickedList[i-1].classList.remove('star-clicked');
-  }
-}
 
-
+//---------modal stars-------------------------
  oneStar.addEventListener('click', function(){
  	stars=1;
   clearSelectedRating();
   oneStar.classList.add('star-clicked');
- 	console.log("Number of stars selected ", stars);
  });
 
  twoStars.addEventListener('click', function(){
@@ -167,7 +203,6 @@ function clearSelectedRating(){
   clearSelectedRating();
   oneStar.classList.add('star-clicked');
   twoStars.classList.add('star-clicked');
-  console.log("Number of stars selected ", stars);
  });
 
  threeStars.addEventListener('click', function(){
@@ -176,7 +211,6 @@ function clearSelectedRating(){
   oneStar.classList.add('star-clicked');
   twoStars.classList.add('star-clicked');
   threeStars.classList.add('star-clicked');
- 	console.log("Number of stars selected ", stars);
  });
 
  fourStars.addEventListener('click', function(){
@@ -186,7 +220,6 @@ function clearSelectedRating(){
   twoStars.classList.add('star-clicked');
   threeStars.classList.add('star-clicked');
   fourStars.classList.add('star-clicked');
-	console.log("Number of stars selected ", stars);
  });
 
  fiveStars.addEventListener('click', function(){
@@ -197,72 +230,91 @@ function clearSelectedRating(){
   threeStars.classList.add('star-clicked');
   fourStars.classList.add('star-clicked');
   fiveStars.classList.add('star-clicked');
- 	console.log("Number of stars selected ", stars);
  });
 
-var tags = document.getElementsByClassName('tags');
-tags[0].addEventListener('click', function(){
-  if(tags[0].classList.contains('tag-clicked')){
-    tags[0].classList.remove('tag-clicked')
-  }
-  else{
-    tags[0].classList.add('tag-clicked');
-  }
-});
-tags[1].addEventListener('click', function(){
-  if(tags[1].classList.contains('tag-clicked')){
-    tags[1].classList.remove('tag-clicked')
-  }
-  else{
-    tags[1].classList.add('tag-clicked');
-  }
-});
-tags[2].addEventListener('click', function(){
-  if(tags[2].classList.contains('tag-clicked')){
-    tags[2].classList.remove('tag-clicked')
-  }
-  else{
-    tags[2].classList.add('tag-clicked');
-  }
-});
-tags[3].addEventListener('click', function(){
-  if(tags[3].classList.contains('tag-clicked')){
-    tags[3].classList.remove('tag-clicked')
-  }
-  else{
-    tags[3].classList.add('tag-clicked');
-  }
-});
-tags[4].addEventListener('click', function(){
-  if(tags[4].classList.contains('tag-clicked')){
-    tags[4].classList.remove('tag-clicked')
-  }
-  else{
-    tags[4].classList.add('tag-clicked');
-  }
-});
-tags[5].addEventListener('click', function(){
-  if(tags[5].classList.contains('tag-clicked')){
-    tags[5].classList.remove('tag-clicked')
-  }
-  else{
-    tags[5].classList.add('tag-clicked');
-  }
-});
-tags[6].addEventListener('click', function(){
-  if(tags[6].classList.contains('tag-clicked')){
-    tags[6].classList.remove('tag-clicked')
-  }
-  else{
-    tags[6].classList.add('tag-clicked');
-  }
-});
+
 
 
 //hides add review button on all reviews page
 var pathname = location.pathname;
 
 if(pathname=="/trending"){
-  console.log("gotta hide the ad review button");
   newReviewButton.classList.add('hidden');
 }
+
+//modal tags
+
+var tags = document.getElementsByClassName('tags');
+
+for(var i=0; i< tags.length; i++){
+  tagListener(tags[i]);
+}
+
+function tagListener(curr){
+  curr.addEventListener('click', function(){
+    if (curr.classList.contains('tag-clicked')){
+      curr.classList.remove('tag-clicked');
+    }
+    else{
+      curr.classList.add('tag-clicked');
+    }
+  });
+}
+
+
+// tags[0].addEventListener('click', function(){
+//   if(tags[0].classList.contains('tag-clicked')){
+//     tags[0].classList.remove('tag-clicked')
+//   }
+//   else{
+//     tags[0].classList.add('tag-clicked');
+//   }
+// });
+// tags[1].addEventListener('click', function(){
+//   if(tags[1].classList.contains('tag-clicked')){
+//     tags[1].classList.remove('tag-clicked')
+//   }
+//   else{
+//     tags[1].classList.add('tag-clicked');
+//   }
+// });
+// tags[2].addEventListener('click', function(){
+//   if(tags[2].classList.contains('tag-clicked')){
+//     tags[2].classList.remove('tag-clicked')
+//   }
+//   else{
+//     tags[2].classList.add('tag-clicked');
+//   }
+// });
+// tags[3].addEventListener('click', function(){
+//   if(tags[3].classList.contains('tag-clicked')){
+//     tags[3].classList.remove('tag-clicked')
+//   }
+//   else{
+//     tags[3].classList.add('tag-clicked');
+//   }
+// });
+// tags[4].addEventListener('click', function(){
+//   if(tags[4].classList.contains('tag-clicked')){
+//     tags[4].classList.remove('tag-clicked')
+//   }
+//   else{
+//     tags[4].classList.add('tag-clicked');
+//   }
+// });
+// tags[5].addEventListener('click', function(){
+//   if(tags[5].classList.contains('tag-clicked')){
+//     tags[5].classList.remove('tag-clicked')
+//   }
+//   else{
+//     tags[5].classList.add('tag-clicked');
+//   }
+// });
+// tags[6].addEventListener('click', function(){
+//   if(tags[6].classList.contains('tag-clicked')){
+//     tags[6].classList.remove('tag-clicked')
+//   }
+//   else{
+//     tags[6].classList.add('tag-clicked');
+//   }
+// });

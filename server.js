@@ -89,13 +89,10 @@ app.get('/:classID', function(request, response, next){
 
 //store new post info
 app.post('/:classType/createReview', function (req, res, next) {
-  console.log("sever post function");
+
   var review = reviewData[req.params.classType];
-  console.log("made variable");
   if (review) {
-    console.log("in first conditional");
     if (req.body) {
-      console.log("in second conditional");
       // var photo = {
       //   url: req.body.url,
       //   caption: req.body.caption
@@ -105,7 +102,8 @@ app.post('/:classType/createReview', function (req, res, next) {
         teacher: req.body.teacher,
         grade:req.body.grade,
         rating:req.body.rating,
-        comments:req.body.comments
+        comments:req.body.comments,
+        tags: req.body.tags
       }
 
       review.reviews = review.reviews || [];
