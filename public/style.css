@@ -630,6 +630,8 @@ a:focus {
   border: 1px solid #dadada;
   border-radius: 50px;
   background-color: #fff;
+  font-size: 28px;
+  font-weight: bold;
 }
 .fa-star{
   color: #ffca4f;
