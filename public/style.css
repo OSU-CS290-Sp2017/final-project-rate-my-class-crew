@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b23408459ef00d3002a6020d6646b4648d1f56f
-body {
+/*body {
   font-family: 'Amatic SC', cursive;
   margin: 0;
   background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t34.0-12/19113398_1385649554824249_677726430_n.png?oh=a76a8d2707713e26e2005df24402cbf6&oe=594059FD);
@@ -32,14 +28,14 @@ a {
 
 .navlist {
   /*margin: 0 0 0 20px;*/
-  padding: 0;
+ /* padding: 0;
   list-style-type: none;
   display: inline-block;
 }
 
 .navitem a{
  /* display: inline-block;*/
-  color: white;
+  /*color: white;
   padding-right: 10px;
 }
 
@@ -72,7 +68,7 @@ a:focus {
 .navbar-search {
   /*float: right;
   margin-right: 20px;*/
-  padding: 0;
+  /*padding: 0;
   line-height: 38px;
 }
 
@@ -97,7 +93,7 @@ a:focus {
   background: none;
   border: none;
   color: #eee;/*#343434;*/
-  cursor: pointer;
+  /*cursor: pointer;
 }
 
 #navbar-search-button:hover {
@@ -337,7 +333,7 @@ label.star:before {
 
 /*-------------home page code------------------*/
 
-.class-page{
+/*.class-page{
   background-color: white;
   width: 60%;
   position: relative;
@@ -408,9 +404,9 @@ label.star:before {
 	vertical-align: middle;
 }*/
 
-.dropdown-menu{
+/*.dropdown-menu{
 	position: relative;
-  padding-right: 0px;
+	padding-right: 0px;
 	padding-right: 800px;
 }
 
@@ -421,7 +417,7 @@ label.star:before {
 	margin:0px;
 	padding: 10px 15px;
 	z-index: 10; /*so menu doesn't get hidden behind other content on page*/
-	background-color: #777676;
+/*	background-color: #777676;
 }
 
 li{
@@ -474,7 +470,7 @@ li{
 .social-media-bar{
 	background-color: #777676;
 	/*height: 60px;*/
-	color: #fff;
+	/*color: #fff;
 	font-weight: none;
 	font-size: 25px;
 	align-items:left;
@@ -483,13 +479,13 @@ li{
     margin-top: -20px;
     left: 50%;
     margin-left: -20px;*/
-}
+/*}
 
 .images{
 	vertical-align: middle;
 	position: left;
 	padding-bottom:5px;
-}
+}*/
 
 body {
   font-family: 'Amatic SC', cursive;
@@ -992,4 +988,19 @@ li{
 	left:0px;
 	bottom:0px;
 	
+}
+
+.error-section{
+  margin-left: 90px;
+  font-size: 35px;
+  color:  #ffca4f;
+  font-weight: bold;
+  background-color: white;
+  width: 33%;
+  margin-left: 35%;
+  margin-right: 20%;
+  border-radius: 30px;
+  text-align: center;
+  padding: 7px;
+  box-shadow: 3px 3px 10px #ffca4f;
 }
