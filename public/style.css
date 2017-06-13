@@ -484,13 +484,20 @@ li{
 
 .social-media-bar{
 	background-color: #777676;
-	height: 50px;
-	padding-bottom: 0px;
-	margin:0px;
-	float:center;
+	/*height: 60px;*/
 	color: #fff;
 	font-weight: none;
 	font-size: 25px;
-	
+	align-items:left;
+    /*top: 50%;*
+	float: left;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;*/
 }
 
+.images{
+	vertical-align: middle;
+	position: left;
+	padding-bottom:5px;
+}
