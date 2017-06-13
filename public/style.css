@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7b23408459ef00d3002a6020d6646b4648d1f56f
 body {
   font-family: 'Amatic SC', cursive;
   margin: 0;
-   background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t34.0-12/19113398_1385649554824249_677726430_n.png?oh=a76a8d2707713e26e2005df24402cbf6&oe=594059FD);
+  background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t34.0-12/19113398_1385649554824249_677726430_n.png?oh=a76a8d2707713e26e2005df24402cbf6&oe=594059FD);
 }
 
 a {
@@ -42,7 +46,7 @@ a {
 li.navitem.navlink {
   display: inline-block;
 }
-//do we still need this??? -erin
+
 .review-attribution a {
   color: #343434;
 }
@@ -109,22 +113,11 @@ a:focus {
   margin: 50px 10%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
 }
 
 .reviews-intro{
-  margin-left: 90px;
-  font-size: 35px;
-  color:  #ffca4f;
-  font-weight: bold;
-  background-color: white;
-  width: 33%;
-  margin-left: 35%;
-  margin-right: 20%;
-  border-radius: 30px;
-  text-align: center;
-  padding: 7px;
-
+  padding-left: 90px;
+  font-size: 28px;
 }
 
 .review {
@@ -153,7 +146,7 @@ a:focus {
 .review-content p {
   margin: 0;
 }
-//again do we need the attribution part of this??? -erin
+
 .review-content .review-attribution {
   margin-top: 8px;
   text-align: right;
@@ -165,14 +158,10 @@ a:focus {
   position: fixed;
   right: 30px;
   bottom: 30px;
-  /*height: 60px;
+  height: 60px;
   width: 60px;
   border: none;
-  border-radius: 30px;*/
-  padding: 5px;
-  border: 3px solid  #ffca4f;
-  border-radius: 15px;
-  font-family: 'Amatic SC', cursive;
+  border-radius: 30px;
   font-size: 36px;
   background-color: #777676;
   color: #fff;
@@ -184,9 +173,9 @@ a:focus {
 #create-review-button:focus {
   right: 27px;
   bottom: 27px;
-  /*height: 66px;
+  height: 66px;
   width: 66px;
-  border-radius: 33px;*/
+  border-radius: 33px;
   font-size: 40px;
   background-color: #ffca4f;
 }
@@ -361,7 +350,7 @@ label.star:before {
   border-style: double;
   border-radius: 5px;
   border-width: thick;
-  border-color: #ffca4f;
+  border-color: #c1bdbd;
   text-align: center;
 }
 
@@ -422,6 +411,7 @@ label.star:before {
 .dropdown-menu{
 	position: relative;
   padding-right: 0px;
+	padding-right: 800px;
 }
 
 .menu-content{
@@ -432,8 +422,6 @@ label.star:before {
 	padding: 10px 15px;
 	z-index: 10; /*so menu doesn't get hidden behind other content on page*/
 	background-color: #777676;
-
-
 }
 
 li{
@@ -481,6 +469,7 @@ li{
 .tag-clicked {
   background-color: #777676;
 }
+
 
 .social-media-bar{
 	background-color: #777676;
@@ -659,7 +648,7 @@ a:focus {
 .review-content p {
   margin: 0;
 }
-//again do we need the attribution part of this??? -erin
+
 .review-content .review-attribution {
   margin-top: 8px;
   text-align: right;
@@ -1004,4 +993,3 @@ li{
 	bottom:0px;
 	
 }
-
