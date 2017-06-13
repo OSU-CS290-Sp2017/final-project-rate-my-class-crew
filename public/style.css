@@ -1,8 +1,4 @@
-/*<<<<<<< HEAD
-=======
-
->>>>>>> 7b23408459ef00d3002a6020d6646b4648d1f56f
-body {
+/*body {
   font-family: 'Amatic SC', cursive;
   margin: 0;
   background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t34.0-12/19113398_1385649554824249_677726430_n.png?oh=a76a8d2707713e26e2005df24402cbf6&oe=594059FD);
@@ -32,14 +28,22 @@ a {
 
 .navlist {
   /*margin: 0 0 0 20px;*/
+
+ /* padding: 0;
+
 /*  padding: 0;
+
   list-style-type: none;
   display: inline-block;
 }
 
 .navitem a{
  /* display: inline-block;*/
+
+  /*color: white;
+
 /*  color: white;
+
   padding-right: 10px;
 }
 
@@ -72,7 +76,10 @@ a:focus {
 .navbar-search {
   /*float: right;
   margin-right: 20px;*/
+  /*padding: 0;
+
 /*  padding: 0;
+
   line-height: 38px;
 }
 
@@ -97,6 +104,8 @@ a:focus {
   background: none;
   border: none;
   color: #eee;/*#343434;*/
+  /*cursor: pointer;
+=======
 /*  cursor: pointer;
 }
 
@@ -336,6 +345,10 @@ label.star:before {
 }
 
 /*-------------home page code------------------*/
+
+
+/*.class-page{
+
 /*
 .class-page{
   background-color: white;
@@ -407,10 +420,14 @@ label.star:before {
 /*li.navitem.navlink.dropdown-menu{
 	vertical-align: middle;
 }*/
+
+/*.dropdown-menu{
+
 /*
 .dropdown-menu{
+
 	position: relative;
-  padding-right: 0px;
+	padding-right: 0px;
 	padding-right: 800px;
 }
 
@@ -474,7 +491,11 @@ li{
 .social-media-bar{
 	background-color: #777676;
 	/*height: 60px;*/
+
+	/*color: #fff;
+=======
 /*	color: #fff;
+
 	font-weight: none;
 	font-size: 25px;
 	align-items:left;
@@ -490,7 +511,9 @@ li{
 	position: left;
 	padding-bottom:5px;
 }*/
+
 /********************************************************************************************************************/
+
 body {
   font-family: 'Amatic SC', cursive;
   margin: 0;
@@ -630,6 +653,8 @@ a:focus {
   border: 1px solid #dadada;
   border-radius: 50px;
   background-color: #fff;
+  font-size: 28px;
+  font-weight: bold;
 }
 .fa-star{
   color: #ffca4f;
@@ -659,7 +684,7 @@ a:focus {
 #create-review-button {
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 40px;
   /*height: 60px;
   width: 60px;
   border: none;
@@ -991,5 +1016,21 @@ li{
 	width: 100%;
 	left:0px;
 	bottom:0px;
+
+}
+
+.error-section{
+  margin-left: 90px;
+  font-size: 35px;
+  color:  #ffca4f;
+  font-weight: bold;
+  background-color: white;
+  width: 33%;
+  margin-left: 35%;
+  margin-right: 20%;
+  border-radius: 30px;
+  text-align: center;
+  padding: 7px;
+  box-shadow: 3px 3px 10px #ffca4f;
 
 }
