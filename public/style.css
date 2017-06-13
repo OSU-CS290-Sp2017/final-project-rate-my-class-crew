@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 body {
   font-family: 'Amatic SC', cursive;
   margin: 0;
-   background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t34.0-12/19113398_1385649554824249_677726430_n.png?oh=a76a8d2707713e26e2005df24402cbf6&oe=594059FD);
+  background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t34.0-12/19113398_1385649554824249_677726430_n.png?oh=a76a8d2707713e26e2005df24402cbf6&oe=594059FD);
 }
 
 a {
@@ -43,7 +43,7 @@ a {
 li.navitem.navlink {
   display: inline-block;
 }
-//do we still need this??? -erin
+
 .review-attribution a {
   color: #343434;
 }
@@ -154,7 +154,7 @@ a:focus {
 .review-content p {
   margin: 0;
 }
-//again do we need the attribution part of this??? -erin
+
 .review-content .review-attribution {
   margin-top: 8px;
   text-align: right;
@@ -660,7 +660,7 @@ a:focus {
 .review-content p {
   margin: 0;
 }
-//again do we need the attribution part of this??? -erin
+
 .review-content .review-attribution {
   margin-top: 8px;
   text-align: right;
@@ -1000,4 +1000,3 @@ li{
 	font-size: 25px;
 
 }
-
