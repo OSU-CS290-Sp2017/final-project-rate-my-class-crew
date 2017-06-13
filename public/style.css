@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 =======
 
 >>>>>>> 7b23408459ef00d3002a6020d6646b4648d1f56f
@@ -32,14 +32,14 @@ a {
 
 .navlist {
   /*margin: 0 0 0 20px;*/
-  padding: 0;
+/*  padding: 0;
   list-style-type: none;
   display: inline-block;
 }
 
 .navitem a{
  /* display: inline-block;*/
-  color: white;
+/*  color: white;
   padding-right: 10px;
 }
 
@@ -72,7 +72,7 @@ a:focus {
 .navbar-search {
   /*float: right;
   margin-right: 20px;*/
-  padding: 0;
+/*  padding: 0;
   line-height: 38px;
 }
 
@@ -97,7 +97,7 @@ a:focus {
   background: none;
   border: none;
   color: #eee;/*#343434;*/
-  cursor: pointer;
+/*  cursor: pointer;
 }
 
 #navbar-search-button:hover {
@@ -336,7 +336,7 @@ label.star:before {
 }
 
 /*-------------home page code------------------*/
-
+/*
 .class-page{
   background-color: white;
   width: 60%;
@@ -407,7 +407,7 @@ label.star:before {
 /*li.navitem.navlink.dropdown-menu{
 	vertical-align: middle;
 }*/
-
+/*
 .dropdown-menu{
 	position: relative;
   padding-right: 0px;
@@ -421,7 +421,7 @@ label.star:before {
 	margin:0px;
 	padding: 10px 15px;
 	z-index: 10; /*so menu doesn't get hidden behind other content on page*/
-	background-color: #777676;
+/*	background-color: #777676;
 }
 
 li{
@@ -474,7 +474,7 @@ li{
 .social-media-bar{
 	background-color: #777676;
 	/*height: 60px;*/
-	color: #fff;
+/*	color: #fff;
 	font-weight: none;
 	font-size: 25px;
 	align-items:left;
@@ -483,14 +483,14 @@ li{
     margin-top: -20px;
     left: 50%;
     margin-left: -20px;*/
-}
+/*}
 
 .images{
 	vertical-align: middle;
 	position: left;
 	padding-bottom:5px;
-}
-
+}*/
+/********************************************************************************************************************/
 body {
   font-family: 'Amatic SC', cursive;
   margin: 0;
@@ -991,5 +991,5 @@ li{
 	width: 100%;
 	left:0px;
 	bottom:0px;
-	
+
 }
